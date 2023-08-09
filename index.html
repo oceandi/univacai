@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="logo/lg.png" rel="icon" type="image/png">
     <style>
-        body, html {
+        body {
             margin: 0;
             padding: 0;
             height: 100%;
@@ -14,25 +14,23 @@
         }
 
         #video-container {
-            position: fixed;
+            position:fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
             z-index: 0;
         }
 
         #fullscreen-video {
             width: 100%;
             height: 100%;
-            object-fit: cover;
         }
     </style>
 </head>
 <body class style="scroll-behavior: smooth;">
     <div id="video-container">
         <video id="fullscreen-video" autoplay loop muted>
-            <source src="logo/opening.mp4" type="video/mp4">
+            <source src="logo/top.mp4" type="video/mp4">
         </video>
     </div>
 </body>
