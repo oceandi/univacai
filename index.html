@@ -6,20 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="logo/lg.png" rel="icon" type="image/png">
     <style>
-        #video-container {
-            position:fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
+        body {
+            background-color: black;
+            margin: 0;
+        }
+        .opening-video {
             z-index: 0;
+            position: absolute;
+            top: 0;
+            left:0;
+            transform:translateY(-17%)
+        }
+        p {
+            z-index: 1;
+            position: absolute;
+            background-color: black;
+            color: whitesmoke;
+            margin: 700px 10px 5px 400px;
+            padding: 10px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 350%;
         }
     </style>
 </head>
 <body class style="scroll-behavior: smooth;">
-    <div id="video-container">
-        <video autoplay loop muted>
-            <source src="logo/opening-video.mp4" type="video/mp4">
-        </video>
+    <video class="opening-video" autoplay loop muted>
+        <source src="logo/opening-video.mp4" type="video/mp4">
+    </video>
     </div>
+    <p>Ideas for creating better era </p>
 </body>
 </html>
