@@ -3,35 +3,36 @@
 <head>
     <meta charset="utf-8">
     <title>UnivacAI</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="logo/lg.png" rel="icon" type="image/png">
     <style>
         body {
+            background-color: black;
             margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: auto;
         }
-
-        #video-container {
-            position:fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
+        .opening-video {
             z-index: 0;
+            position: absolute;
+            top: 0;
+            left:0;
+            transform:translateY(-17%)
         }
-
-        #fullscreen-video {
-            width: 100%;
-            height: 100%;
+        p {
+            z-index: 1;
+            position: absolute;
+            color: whitesmoke;
+            margin: 500px 10px 5px 380px;
+            padding: 10px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 500%;
         }
     </style>
 </head>
 <body class style="scroll-behavior: smooth;">
-    <div id="video-container">
-        <video id="fullscreen-video" autoplay loop muted>
-            <source src="logo/top.mp4" type="video/mp4">
-        </video>
+    <video class="opening-video" autoplay loop muted>
+        <source src="logo/opening-video.mp4" type="video/mp4">
+    </video>
     </div>
+    <p>Shaping a New Era: Cultivating Potential <br>for All</p>
 </body>
 </html>
