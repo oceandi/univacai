@@ -38,13 +38,42 @@
                 margin-right: auto;
                 margin-top: -404px;
             }
+
+            @media screen and (max-width: 768px) {
+                .circle {
+                height: 500px;
+                width: 500px;
+                background-color: #E4D552;
+                border-radius: 50%;
+                margin: auto;
+                z-index: 0;
+                }
+
+                .square {
+                height: 270px;
+                width: 100%;
+                background-color: #BF3E00;
+                z-index: 2;
+                margin: 0%;
+                }
+
+                .photo {
+                width: 100px;
+                z-index: 3;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: -404px;
+                }
+            }
+
         </style>
     </head>
     <body>
         <div>
             <div class="circle"></div>
             <div class="square"></div>
-            <div class="container">
+            <div>
                 <img class=photo src="logo/cowboy.png">
             </div>
             <p>Shaping a New Era: Cultivating Potential for All</p>
