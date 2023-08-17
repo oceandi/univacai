@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apply Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align content to the top */
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 10%; /* Add margin space at the top */
+        }
+        label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: bold;
+            font-size: 18px;
+            white-space: pre-wrap;
+            display: inline-block;
+            max-width: 100%;
+            line-height: 1.5;
+            word-wrap: break-word;
+            color: inherit;
+            padding-top: 0;
+            width: auto;
+            text-align: left;
+            float: none;
+        }
+        .explanation {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="url"],
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .x {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="explanation">
+            Apple for UnivacAI<br><br>
+
+            We recruit experienced engineers and researchers to join our team as members of our technical staff. Please fill out this form to apply.<br><br>
+
+            If we would like to know more about your skills and experience, we will contact you within 3 weeks of receiving the application.<br><br>
+        </p>
+        <form action="submit_form.php" method="post" enctype="multipart/form-data">
+            <label for="first_name">First Name*:</label>
+            <p class="explanation">Your preferred first name. Ideally, this is also the name used on your publications.</p>
+            <input type="text" id="first_name" name="first_name" required>
+            
+            <label for="last_name">Last Name*:</label>
+            <p class="explanation">Your last name. Ideally, this is also the name used on your publications.</p>
+            <input type="text" id="last_name" name="last_name" required>
+            
+            <label for="email">Email*:</label>
+            <p class="explanation">Your private E-Mail address. Please don't use your current work E-Mail address.</p>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <p class="explanation">A phone number including the country code.</p>
+            <input type="tel" id="phone" name="phone">
+            
+            <label for="twitter">Twitter:</label>
+            <p class="explanation">If you have a public Twitter profile, please provide its URL.</p>
+            <input type="url" id="twitter" name="twitter">
+            
+            <label for="linkedin">LinkedIn:</label>
+            <p class="explanation">If you have a public LinkedIn profile, please provide its URL.</p>
+            <input type="url" id="linkedin" name="linkedin">
+            
+            <label for="google_scholar">Google Scholar:</label>
+            <p class="explanation">If you have a Google Scholar page, please provide its URL.</p>
+            <input type="url" id="google_scholar" name="google_scholar">
+            
+            <label for="cv">CV*:</label>
+            <p class="explanation">Please upload an up-to-date CV in PDF form.</p>
+            <input type="file" id="cv" name="cv" accept=".pdf" required>
+            
+            <label for="current_employer">Current Employer:</label>
+            <p class="explanation">If you are currently employed in the field, please tell us the name of your employer.</p>
+            <input type="text" id="current_employer" name="current_employer">
+            
+            <label for="current_role">Current Role:</label>
+            <p class="explanation">If you are currently employed in the field, please tell us your role including your seniority level (e.g. Software Engineer II).</p>
+            <input type="text" id="current_role" name="current_role">
+            
+            <label for="exceptional_work">What exceptional work have you done?*:</label>
+            <p class="explanation">Tell us about a piece of work that you are most proud about.</p>
+            <textarea id="exceptional_work" name="exceptional_work" rows="4" cols="50" required></textarea>
+            
+            <label for="attachments">Attachments:</label>
+            <p class="explanation">You can attach relevant files that showcase your exceptional work.</p>
+            <input type="file" id="attachment1" name="attachment1" accept=".pdf">
+            <input type="file" id="attachment2" name="attachment2" accept=".pdf">
+            <input type="file" id="attachment3" name="attachment3" accept=".pdf">
+            <input type="file" id="attachment4" name="attachment4" accept=".pdf">
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
