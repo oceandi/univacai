@@ -23,12 +23,3 @@ for a developer,
 because so many people have had same questions as you,
 and 99.9% of the time, the answer is out there, 
 you just have to get good at finding it.
-
-
-
-
-i learned from <khanacademy.org>
-
-you're on your own, i gotta get outta here Mikey
-Shaping a New Era: Cultivating Potential for All
-For Better World
