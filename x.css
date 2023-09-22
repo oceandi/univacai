@@ -1,0 +1,52 @@
+.desktop {
+    width: 1920px;
+    height: min-content; /* 3693px */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(180deg, #2e3060 0%, #8b8b8b 48.1981981981982%, rgb(89, 89, 89) 100%);
+    overflow: hidden;
+    padding: 0px 0px 0px 0px;
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    position: absolute;
+    border-radius: 0px 0px 0px 0px;
+}
+  
+.first {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    background-color: blueviolet;
+    width: 100%;
+    height: 735px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px 0px 0px 0px;
+    border-color: #fefefe;
+    border-style: solid;
+    border-top-width: 0px;
+    border-bottom-width: 6px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+.second {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    background-color: #7a2b2b;
+    width: 100%;
+    height: 735px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px 0px 0px 0px;
+    border-color: #fefefe;
+    border-style: solid;
+    border-top-width: 6px;
+    border-bottom-width: 6px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
