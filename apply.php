@@ -12,36 +12,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $current_role = $_POST['current_role'];
     $exceptional_work = $_POST['exceptional_work'];
     
-    // Handle uploaded CV file
-    $cv_file = $_FILES['cv'];
-    
-    // Process other uploaded files if needed
-    $attachment1 = $_FILES['attachment1'];
-    $attachment2 = $_FILES['attachment2'];
-    $attachment3 = $_FILES['attachment3'];
-    $attachment4 = $_FILES['attachment4'];
-    
-    // Perform data validation and storage
-    // You can save the data to a database or send it via email
-    
-    // Example: Store the data in a text file
-    $data = "First Name: $first_name\n";
-    $data .= "Last Name: $last_name\n";
-    $data .= "Email: $email\n";
-    $data .= "Phone: $phone\n";
-    $data .= "Twitter: $twitter\n";
-    $data .= "LinkedIn: $linkedin\n";
-    $data .= "Google Scholar: $google_scholar\n";
-    $data .= "Current Employer: $current_employer\n";
-    $data .= "Current Role: $current_role\n";
-    $data .= "Exceptional Work:\n$exceptional_work\n";
-    
-    // Save the data to a text file
-    $file_path = "form_data_" . date("Y-m-d_H-i-s") . ".txt";
-    file_put_contents($file_path, $data);
-    
-    // Redirect to a thank-you page
-    header("Location: thank-you.html");
-    exit;
+    // Perform data validation
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        // Email is valid, continue processing
+        // Add additional data validation as needed
+        
+        // Example: Send the data via email
+        $to = "korkmaz.x7@gmail.com"; // Replace with your email address
+        $subject = "Form Submission";
+        $message = "First Name: $first_name\n";
+        $message .= "Last Name: $last_name\n";
+        $message .= "Email: $email\n";
+        $message .= "Phone: $phone\n";
+        $message .= "Twitter: $twitter\n";
+        $message .= "LinkedIn: $linkedin\n";
+        $message .= "Google Scholar: $google_scholar\n";
+        $message .= "Current Employer: $current_employer\n";
+        $message .= "Current Role: $current_role\n";
+        $message .= "Exceptional Work:\n$exceptional_work\n";
+        
+        // Send email
+        if (mail($to, $subject, $message)) {
+            // Email sent successfully
+            // You can customize further actions or responses here
+            header("Location: thank-you.html");
+            exit;
+        } else {
+            // Email sending failed
+            // Handle errors or provide user feedback
+            echo "Email sending failed. Please try again later.";
+        }
+    } else {
+        // Email is not valid
+        // Handle invalid data or provide user feedback
+        echo "Invalid email address. Please check your email and try again.";
+    }
 }
 ?>
