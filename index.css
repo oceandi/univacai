@@ -505,6 +505,14 @@ a:active {
         width: 332px;
         height: 197px;
     }
+
+    .three {
+        height: 500px;
+    }
+
+    .four {
+        height: 500px;
+    }
 }
 
 /* iPad ve iPhone 768px (e.g., veya daha azı) */
@@ -539,6 +547,7 @@ a:active {
         height: 500px;
         border-left-width: 0; /* Remove left border */
         border-right-width: 0; /* Remove right border */
+        padding: 50px 0px 0px 0px;
     }
 
     .projects {
@@ -546,6 +555,7 @@ a:active {
         height: 500px;
         border-left-width: 0; /* Remove left border */
         border-right-width: 0; /* Remove right border */
+        padding: 50px 0px 0px 0px;
     }
 
     .four {
@@ -558,6 +568,7 @@ a:active {
         height: 500px;
         border-left-width: 0; /* Remove left border */
         border-right-width: 0; /* Remove right border */
+        padding: 50px 0px 0px 0px;
     }
 
     .join {
@@ -565,6 +576,7 @@ a:active {
         height: 500px;
         border-left-width: 0; /* Remove left border */
         border-right-width: 0; /* Remove right border */
+        padding: 50px 0px 0px 0px;
     }
 
     /* Add any additional styles for this screen size */
