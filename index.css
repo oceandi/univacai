@@ -60,7 +60,7 @@ html, body {
 
 .shape {
     flex-shrink: 0;
-    width: 333px;
+    width: 350px;
     height: auto;
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -68,13 +68,14 @@ html, body {
     max-width: 100%;
     overflow: hidden;
     position: relative;
-    font-weight: 100;
+    font-weight: 300;
     font-style: normal;
     color: #151518;
     font-size: 35px;
     letter-spacing: 0px;
     line-height: 1.2;
     text-align: center;
+    font-family: "Google Sans Display","Google Sans","Google Sans Text",Arial,sans-serif;
 }
 
 .learnmore{
@@ -93,6 +94,7 @@ html, body {
     letter-spacing: 0px;
     line-height: 1.2;
     text-align: center;
+    font-family: "Google Sans Display","Google Sans","Google Sans Text",Arial,sans-serif;
 }
 
 a:link {
@@ -144,6 +146,7 @@ a:active {
     letter-spacing: 0px;
     line-height: 1.2;
     text-align: center;
+    font-family: "Google Sans Display","Google Sans","Google Sans Text",Arial,sans-serif;
 }
 
 .arrow {
@@ -482,4 +485,87 @@ a:active {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 0px;
+}
+
+/* Mac 1200px and 1919px */
+@media screen and (max-width: 1919px) {
+    .desktop {
+        width: 100%;
+    }
+    /* Add any additional styles for this screen size */
+}
+
+/* Macbook 768px and 1199px */
+@media screen and (max-width: 1199px) {
+    .desktop {
+        /* Adjust styles for this screen size */
+    }
+
+    .learnpc {
+        width: 332px;
+        height: 197px;
+    }
+}
+
+/* iPad ve iPhone 768px (e.g., veya daha azı) */
+@media screen and (max-width: 767px) {
+    .one {
+        height: 650px;
+    }
+    
+    .two {
+        height: 650px;
+    }
+
+    .shape {
+        font-size: 25px;
+        width: 350px;
+    }
+
+    .mission {
+        font-size: 25px;
+        width: 350px;
+    }
+
+    /* Set the 3rd and 4th parts to stack on top of each other */
+    .three {
+        flex-direction: column; /* Change to column layout */
+        height: auto; /* Allow the container to grow as needed */
+    }
+
+    /* Adjust styles for individual elements within the 3rd and 4th parts */
+    .learn {
+        width: 100%; /* Take full width */
+        height: 500px;
+        border-left-width: 0; /* Remove left border */
+        border-right-width: 0; /* Remove right border */
+    }
+
+    .projects {
+        width: 100%; /* Take full width */
+        height: 500px;
+        border-left-width: 0; /* Remove left border */
+        border-right-width: 0; /* Remove right border */
+    }
+
+    .four {
+        flex-direction: column; /* Change to column layout */
+        height: auto; /* Allow the container to grow as needed */
+    }
+
+    .ai {
+        width: 100%; /* Take full width */
+        height: 500px;
+        border-left-width: 0; /* Remove left border */
+        border-right-width: 0; /* Remove right border */
+    }
+
+    .join {
+        width: 100%; /* Take full width */
+        height: 500px;
+        border-left-width: 0; /* Remove left border */
+        border-right-width: 0; /* Remove right border */
+    }
+
+    /* Add any additional styles for this screen size */
 }
