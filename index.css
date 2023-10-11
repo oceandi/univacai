@@ -221,6 +221,7 @@ a:active {
     border-radius: 0;
     border-color: #0b0b0b;
     background-image: url(images/home/learn.jpg);
+    background-position: center center;
     background-size: cover;
     border-style: solid;
     border-top-width: 6px;
@@ -266,6 +267,7 @@ a:active {
     border-radius: 0;
     border-color: #0b0b0b;
     background-image: url(images/home/build.jpg);
+    background-position: center center;
     background-size: cover;
     border-style: solid;
     border-top-width: 6px;
@@ -328,6 +330,7 @@ a:active {
     border-radius: 0;
     border-color: #0b0b0b;
     background-image: url(images/home/explore.jpg);
+    background-position: center center;
     background-size: cover;
     border-style: solid;
     border-top-width: 6px;
@@ -373,6 +376,7 @@ a:active {
     border-radius: 0;
     border-color: #0b0b0b;
     background-image: url(images/home/join.jpg);
+    background-position: center center;
     background-size: cover;
     border-style: solid;
     border-top-width: 6px;
