@@ -87,6 +87,7 @@ html, body {
     word-break: break-word;
     max-width: 100%;
     overflow: hidden;
+    color: #1A73E8;
     position: relative;
     font-weight: 100;
     font-style: normal;
