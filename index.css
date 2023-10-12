@@ -57,7 +57,7 @@ html, body {
     color: transparent!important;
 }
 
-.goog-te-banner-frame{
+.goog-te-banner-frame.skiptranslate{
     display: none !important;
 }
 
