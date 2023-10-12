@@ -544,5 +544,10 @@ a:active {
         padding: 25px 0px 0px 0px;
     }
 
+    #google_translate_element {
+        right: 10px;
+        top: 40px;
+        opacity: 0.9;
+    }
     /* Add any additional styles for this screen size */
 }
