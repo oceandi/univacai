@@ -4,25 +4,6 @@ html, body {
     scroll-behavior: smooth;
 }
 
-#google_translate_element {
-    width: auto;
-    height: auto;
-    background-color: #f2f2f4;
-    position: absolute;
-    right: 50px;
-    top: 50px;
-    padding: 10px;
-    opacity: 0.9;
-}
-
-#google_translate_element select{
-    background-color:#f2f2f4;
-    color:#141414;
-    border: none;
-    border-radius:3px;
-    padding:6px 8px
-}
-
 .desktop {
     width: 1920px;
     height: min-content;
@@ -39,6 +20,36 @@ html, body {
     position: absolute;
     border-radius: 0px;
 }
+
+#google_translate_element {
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    opacity: 0.9;
+}
+
+#google_translate_element select{
+    background-color:#f2f2f4;
+    color:#141414;
+    border: none;
+    border-radius:3px;
+    padding:5px 7px
+}
+
+.goog-logo-link{
+    display:none !important;
+}
+
+ .goog-te-gadget{
+  color:transparent!important;
+}
+
+.goog-te-banner-frame{
+    display:none !important;
+}
+
 
 .logo {
     flex-shrink: 0;
