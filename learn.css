@@ -21,26 +21,6 @@ html, body {
     border-radius: 0px;
 }
 
-a:link {
-    color: #1A73E8;
-    text-decoration: none;
-}
-  
-a:visited {
-    text-decoration: none;
-    color: #1A73E8;
-}
-  
-a:hover {
-    text-decoration: underline;
-    color: #ffffff;
-}
-  
-a:active {
-    text-decoration: underline;
-    color: #ffffff;
-}
-
 .one {
     flex-shrink: 0;
     width: 100%;
@@ -263,7 +243,7 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
-a:link, a:visited {
+a.one:link, a.one:visited {
     background-color: white;
     color: #171a20;
     border: 3px solid #171a20;
@@ -273,9 +253,10 @@ a:link, a:visited {
     display: inline-block;
     font-family: 'Roboto', sans-serif;
     width: 250px;
+    height: 15px;
 }
   
-a:hover, a:active {
+a.one:hover, a.one:active {
     background-color: #171a20;
     color: white;
 }
@@ -322,8 +303,6 @@ a:hover, a:active {
     background-size: cover;
 }
 
-/* Google Translate API css rules stating */
-
 #goog-gt-tt, .goog-te-balloon-frame{
     display: none !important;
 }
@@ -337,8 +316,8 @@ a:hover, a:active {
     width: auto;
     height: auto;
     position: absolute;
-    right: 40px;
-    top: 40px;
+    right: 0px;
+    top: 0px;
     opacity: 0.9;
 }
 
@@ -361,8 +340,6 @@ a:hover, a:active {
 .goog-te-banner-frame{
     display: none !important;
 }
-
-/* Google Translate API css rules finished */
 
 /* Mac 1200px and 1919px */
 @media screen and (max-width: 1919px) {
