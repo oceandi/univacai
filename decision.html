@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn</title>
+    <title>?</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="logo01.ico">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
@@ -143,6 +145,67 @@
             border-color: #B31A1A;
             color: white;
         }
+
+        /* Google Translate API css rules stating */
+
+
+        #goog-gt-tt, .goog-te-balloon-frame{
+            display: none !important;
+        }
+
+        .goog-text-highlight{ 
+            background: none !important;
+            box-shadow: none !important;
+        }
+
+        #google_translate_element {
+            width: auto;
+            height: auto;
+            position: absolute;
+            right: 40px;
+            top: 40px;
+            opacity: 0.9;
+        }
+
+        #google_translate_element select{
+            background-color:#f2f2f4;
+            color:#141414;
+            border: none;
+            border-radius:3px;
+            padding:5px 7px
+        }
+
+        .goog-logo-link{
+            display: none !important;
+        }
+
+        .goog-te-gadget{
+            color: transparent !important;
+        }
+
+        .goog-te-banner-frame{
+            display: none !important;
+        }
+
+        /* Google Translate API css rules finished */
+
+        @media screen and (max-width: 767px) {
+            #google_translate_element {
+                right: -40px;
+                top: 40px;
+                opacity: 0.9;
+            }
+        }
+
+        .cursor {
+            width: 20px;
+            height: 20px;
+        }
+
+        .l {
+            width: 20px;
+            height: 20px;
+        }
     </style>
 </head>
 
@@ -153,25 +216,23 @@
         new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
         }
     </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <div class="computer">
         <div class="title-bar">
             <div class="circle red"></div>
             <div class="circle yellow"></div>
             <div class="circle green"></div>
-            Terminal
+            <img class="l" src="logo01.ico">
         </div>
         <div class="screen">
-            <div class="mission">MISSION:</div>
+            <div class="mission">Are you sure ?  <img class="cursor" src="images/icons/cursor.gif"></div>
             <div class="button-container">
-                <a href="#" class="pill learn">LEARN</a>
-                <a href="#" class="pill plue">PLUE</a>
+                <a href="https://www.univacai.com" class="pill learn">RETURN</a>
+                <a href="#" class="pill plue">STAY</a>
             </div>
             <div class="apple-logo"></div>
         </div>
     </div>
-    <script>
-        // Add any JavaScript you might need here
-    </script>
 </body>
 
 </html>
