@@ -1,4 +1,4 @@
-.desktop {
+.opening {
     width: 1920px;
     height: min-content;
     display: flex;
@@ -14,7 +14,7 @@
     border-radius: 0px;
 }
 
-.sayfa {
+.choose {
     box-sizing: border-box;
     flex-shrink: 0;
     width: 100%;
@@ -33,7 +33,7 @@
     border-radius: 0px;
 }
 
-.choose {
+.choosetxt {
     flex-shrink: 0;
     width: 100%;
     height: auto;
