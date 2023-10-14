@@ -21,8 +21,308 @@ html, body {
     border-radius: 0px;
 }
 
-/* Google Translate API css rules stating */
+a:link {
+    color: #1A73E8;
+    text-decoration: none;
+}
+  
+a:visited {
+    text-decoration: none;
+    color: #1A73E8;
+}
+  
+a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+  
+a:active {
+    text-decoration: underline;
+    color: #ffffff;
+}
 
+.one {
+    flex-shrink: 0;
+    width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    border-radius: 0px;
+}
+
+.photo1 {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 25px 0px 0px 0px;
+    overflow: hidden;
+    position: relative;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    border-radius: 0;
+    background-image: url(images/home/code.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.textbox {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 420px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px 25px 50px 25px;
+    overflow: hidden;
+    position: relative;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    border-radius: 0;
+    background-color: #d1d1d1;
+    background-position: center center;
+    background-size: cover;
+}
+
+.wtextbox {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 125px 30px 420px;
+    overflow: hidden;
+    position: relative;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 0px;
+    border-radius: 0;
+    background-color: #d1d1d1;
+    background-position: center center;
+    background-size: cover;
+}
+
+.two {
+    flex-shrink: 0;
+    width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    border-radius: 0px;
+}
+
+.wphoto2 {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 35px 0px 0px 0px;
+    overflow: hidden;
+    position: relative;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 64;
+    border-radius: 0;
+    background-image: url(images/home/books.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.photo3 {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 25px 0px 0px 0px;
+    overflow: hidden;
+    position: relative;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    border-radius: 0;
+    background-image: url(images/home/ml.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.wphoto4 {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 35px 0px 0px 0px;
+    overflow: hidden;
+    position: relative;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 64;
+    border-radius: 0;
+    background-image: url(images/home/read.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.five {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    overflow: hidden;
+    position: relative;
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    background-image: url(images/home/openai.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0px;
+}
+
+h1 {
+    flex-shrink: 0;
+    width: 350px;
+    height: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    font-weight: 400;
+    font-style: normal;
+    color: #0a0a0a;
+    font-size: 41px;
+    letter-spacing: 0px;
+    line-height: 1.2;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    flex-shrink: 0;
+    width: 333px;
+    height: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
+    overflow: hidden;
+    color: #0a0a0a;
+    position: relative;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 21px;
+    letter-spacing: 0px;
+    line-height: 1.2;
+    text-align:left;
+    font-family: 'Roboto', sans-serif;
+}
+
+a:link, a:visited {
+    background-color: white;
+    color: #171a20;
+    border: 3px solid #171a20;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    width: 250px;
+}
+  
+a:hover, a:active {
+    background-color: #171a20;
+    color: white;
+}
+
+.buttons {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px 0px 0px;
+    overflow: hidden;
+    position: relative;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-radius: 0;
+    background-color: #d1d1d1;
+    background-position: center center;
+    background-size: cover;
+}
+
+.wbuttons {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px 0px 0px;
+    overflow: hidden;
+    position: relative;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-radius: 0;
+    background-color: #d1d1d1;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Google Translate API css rules stating */
 
 #goog-gt-tt, .goog-te-balloon-frame{
     display: none !important;
@@ -64,173 +364,6 @@ html, body {
 
 /* Google Translate API css rules finished */
 
-
-a:link {
-    color: #1A73E8;
-    text-decoration: none;
-}
-  
-a:visited {
-    text-decoration: none;
-    color: #1A73E8;
-}
-  
-a:hover {
-    text-decoration: underline;
-    color: #ffffff;
-}
-  
-a:active {
-    text-decoration: underline;
-    color: #ffffff;
-}
-
-.one {
-    flex-shrink: 0;
-    width: 100%;
-    height: 900px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    padding: 0px;
-    align-content: center;
-    flex-wrap: wrap;
-    gap: 0;
-    border-radius: 0px;
-}
-
-.photo {
-    box-sizing: border-box;
-    flex-shrink: 0;
-    flex-grow: 1;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 25px 0px 0px 0px;
-    overflow: hidden;
-    position: relative;
-    align-content: center;
-    flex-wrap: wrap;
-    gap: 0;
-    border-radius: 0;
-    background-image: url(images/home/code.jpg);
-    background-position: center center;
-    background-size: cover;
-}
-
-.textbox {
-    box-sizing: border-box;
-    flex-shrink: 0;
-    width: 420px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 25px 0px 0px 0px;
-    overflow: hidden;
-    position: relative;
-    align-content: center;
-    flex-wrap: wrap;
-    gap: 32px;
-    border-radius: 0;
-    background-color: #fff;
-    background-position: center center;
-    background-size: cover;
-}
-
-.two {
-    flex-shrink: 0;
-    width: 100%;
-    height: 900px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    padding: 0px;
-    align-content: center;
-    flex-wrap: nowrap;
-    gap: 0;
-    border-radius: 0px;
-}
-
-.wphoto {
-    box-sizing: border-box;
-    flex-shrink: 0;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 35px 0px 0px 0px;
-    overflow: hidden;
-    position: relative;
-    align-content: center;
-    flex-wrap: wrap;
-    gap: 64;
-    border-radius: 0;
-    background-image: url(images/home/explore.jpg);
-    background-position: center center;
-    background-size: cover;
-}
-
-.wtextbox {
-    box-sizing: border-box;
-    flex-shrink: 0;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 35px 0px 0px 0px;
-    overflow: hidden;
-    position: relative;
-    align-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    border-radius: 0;
-    border-color: #0b0b0b;
-    background-color: #fff;
-    background-position: center center;
-    background-size: cover;
-    border-style: solid;
-    border-top-width: 6px;
-    border-bottom-width: 6px;
-    border-left-width: 6px;
-    border-right-width: 12px;
-}
-
-.five {
-    box-sizing: border-box;
-    flex-shrink: 0;
-    width: 100%;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    overflow: hidden;
-    position: relative;
-    align-content: center;
-    flex-wrap: nowrap;
-    gap: 0;
-    background-image: url(images/home/openai.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 0px;
-}
-
 /* Mac 1200px and 1919px */
 @media screen and (max-width: 1919px) {
     .desktop {
@@ -245,11 +378,11 @@ a:active {
         /* Adjust styles for this screen size */
     }
 
-    .three {
+    .one {
         height: 500px;
     }
 
-    .four {
+    .two {
         height: 500px;
     }
 }
@@ -316,12 +449,6 @@ a:active {
         border-left-width: 0; /* Remove left border */
         border-right-width: 0; /* Remove right border */
         padding: 25px 0px 0px 0px;
-    }
-
-    #google_translate_element {
-        right: -40px;
-        top: 40px;
-        opacity: 0.9;
     }
     /* Add any additional styles for this screen size */
 }

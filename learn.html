@@ -21,26 +21,98 @@
     <body >
         <div class="desktop">
             <div class="one" id="learncode">
-                <div class="photo">
-                    <a href="https://lively-surprise-977330.framer.app/learn">
-                    </a>
+                <div class="photo1">
                 </div>
                 <div class="textbox">
-                    <a href="https://github.com/oceandi?tab=repositories">
-                    </a>
+                    <div class="text">
+                        <h1>Computer Science</h1>
+                        <p>Programming languages enable you to bring your ideas to life on a computer. Much like learning a human language, once you grasp its structure, you can move on to more advanced concepts.</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="https://www.youtube.com/watch?v=zOjov-2OZ0E&t=1s">freeCodeCamp (for start)</a>
+                        <a href="https://mimo.org">Mimo Bootcamp<img src="images/icons/mimo.png" width="30px" height="30px"></a>
+                    </div>
                 </div>
             </div>
             <div class="two">
-                <div class="wphoto">
-                    <a href="https://www.deeplearning.ai/">
-                    </a>
+                <div class="wphoto2">
                 </div>
                 <div class="wtextbox">
-                    <a href="apply/apply.html">
-                    </a>
+                    <div class="text">
+                        <h1>Let's Get Warm</h1>
+                        <p>After gaining a basic understanding of Python, David Malan from Harvard University is among the best educators to delve deeper into the subject.</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="https://www.youtube.com/watch?v=IDDmrzzB14M">CS50X (Computer Science)</a>
+                        <a href="https://www.youtube.com/watch?v=OvKCESUCWII&list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V">CS50P (Python)</a>
+                    </div>
+                </div>
+            </div>            
+            <div class="one" id="learncode">
+                <div class="textbox">
+                    <div class="text">
+                        <h1>AI for Everyone</h1>
+                        <p>Having gained a foundation in computer language and expressed gratitude to those who guided you in programming, it's time to step into the broader world of AI. Andrew Ng, one of the leading machine learning experts of our era, offers invaluable lessons on AI and machine learning through the Coursera platform he co-founded. Dive in and embark on this exciting journey!</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="https://www.deeplearning.ai/courses/ai-for-everyone/">What is AI</a>
+                        <a href="https://www.deeplearning.ai/courses/machine-learning-specialization/">ML Specialization</a>
+                    </div>
+                </div>
+                <div class="photo3">
                 </div>
             </div>
-            <div class="five"></div>
+            <div class="two">
+                <div class="wphoto4">
+                </div>
+                <div class="wtextbox">
+                    <div class="text">
+                        <h1>Feed Your Head</h1>
+                        <p>Only thing you should know is:<br>Only you can set you free</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="https://www.youtube.com/watch?v=BEtPCT7ZcE0&list=PLAbQFf-vMaUnbo7pY8Dhtvisoc6XWNT1G&index=22">Explore</a>
+                        <a href="apply/apply.html">Join</a>
+                    </div>
+                </div>
+            </div>
+            <div class="wtextbox">
+                <div id="google_translate_element"></div>
+            
+                <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+                }
+            
+                // Custom Styling Function for Google Translate Widget
+                function styleGoogleTranslateWidget() {
+                    var widget = document.querySelector(".goog-te-combo");
+                    if (widget) {
+                        widget.style.backgroundColor = "#f0f0f0";
+                        widget.style.fontSize = "16px";
+                    }
+                }
+            
+                // MutationObserver to detect when the widget loads
+                var observer = new MutationObserver(function(mutations) {
+                    mutations.forEach(function(mutation) {
+                        if (document.querySelector(".goog-te-combo")) {
+                            styleGoogleTranslateWidget();
+                            observer.disconnect();  // Stop observing once the widget is styled
+                        }
+                    });
+                });
+            
+                // Start observing
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+            
+                </script>
+            
+                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </div>
         </div>
     </body>
 </html>
