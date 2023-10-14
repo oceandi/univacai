@@ -1,10 +1,17 @@
-.opening {
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.desktop {
     width: 1920px;
     height: min-content;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    background-color: #141414;
     overflow: hidden;
     padding: 0;
     align-content: center;
@@ -14,40 +21,307 @@
     border-radius: 0px;
 }
 
-.choose {
-    box-sizing: border-box;
+/* Google Translate API css rules stating */
+
+
+#goog-gt-tt, .goog-te-balloon-frame{
+    display: none !important;
+}
+
+.goog-text-highlight{ 
+    background: none !important;
+    box-shadow: none !important;
+}
+
+#google_translate_element {
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    opacity: 0.9;
+}
+
+#google_translate_element select{
+    background-color:#f2f2f4;
+    color:#141414;
+    border: none;
+    border-radius:3px;
+    padding:5px 7px
+}
+
+.goog-logo-link{
+    display: none !important;
+}
+
+.goog-te-gadget{
+    color: transparent !important;
+}
+
+.goog-te-banner-frame{
+    display: none !important;
+}
+
+/* Google Translate API css rules finished */
+
+
+a:link {
+    color: #1A73E8;
+    text-decoration: none;
+}
+  
+a:visited {
+    text-decoration: none;
+    color: #1A73E8;
+}
+  
+a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+  
+a:active {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.one {
     flex-shrink: 0;
     width: 100%;
-    height: 875px;
+    height: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    border-radius: 0px;
+}
+
+.photo {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 25px 0px 0px 0px;
+    overflow: hidden;
+    position: relative;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    border-radius: 0;
+    background-image: url(images/home/code.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.textbox {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 420px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 25px 0px 0px 0px;
+    overflow: hidden;
+    position: relative;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    border-radius: 0;
+    background-color: #fff;
+    background-position: center center;
+    background-size: cover;
+}
+
+.two {
+    flex-shrink: 0;
+    width: 100%;
+    height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 150px 40px 100px 40px;
-    background-color: #f5f5f7;
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    border-radius: 0px;
+}
+
+.wphoto {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 35px 0px 0px 0px;
+    overflow: hidden;
+    position: relative;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 64;
+    border-radius: 0;
+    background-image: url(images/home/explore.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.wtextbox {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 35px 0px 0px 0px;
+    overflow: hidden;
+    position: relative;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    border-radius: 0;
+    border-color: #0b0b0b;
+    background-color: #fff;
+    background-position: center center;
+    background-size: cover;
+    border-style: solid;
+    border-top-width: 6px;
+    border-bottom-width: 6px;
+    border-left-width: 6px;
+    border-right-width: 12px;
+}
+
+.five {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
     overflow: hidden;
     position: relative;
     align-content: center;
     flex-wrap: nowrap;
-    gap: 21;
+    gap: 0;
+    background-image: url(images/home/openai.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 0px;
 }
 
-.choosetxt {
-    flex-shrink: 0;
-    width: 100%;
-    height: auto;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-word;
-    max-width: 100%;
-    position: relative;
-    font-weight: 400;
-    font-style: normal;
-    font-family: "Google Sans Display","Google Sans","Google Sans Text",Arial,sans-serif;
-    color: #333333;
-    font-size: 48px;
-    letter-spacing: 0px;
-    line-height: 1.2;
-    text-align: center;
+/* Mac 1200px and 1919px */
+@media screen and (max-width: 1919px) {
+    .desktop {
+        width: 100%;
+    }
+    /* Add any additional styles for this screen size */
+}
+
+/* Macbook 768px and 1199px */
+@media screen and (max-width: 1199px) {
+    .desktop {
+        /* Adjust styles for this screen size */
+    }
+
+    .three {
+        height: 500px;
+    }
+
+    .four {
+        height: 500px;
+    }
+}
+
+/* iPad ve iPhone 768px (e.g., veya daha azı) */
+@media screen and (max-width: 767px) {
+    .one {
+        height: 650px;
+    }
+    
+    .two {
+        height: 650px;
+    }
+
+    .logotxt {
+        font-size: 25px;
+        width: 350px;
+    }
+
+    .mission {
+        font-size: 25px;
+        width: 350px;
+    }
+
+    /* Set the 3rd and 4th parts to stack on top of each other */
+    .three {
+        flex-direction: column; /* Change to column layout */
+        height: auto; /* Allow the container to grow as needed */
+    }
+
+    /* Adjust styles for individual elements within the 3rd and 4th parts */
+    .learn {
+        width: 100%; /* Take full width */
+        height: 500px;
+        border-left-width: 0; /* Remove left border */
+        border-right-width: 0; /* Remove right border */
+        padding: 25px 0px 0px 0px;
+    }
+
+    .build {
+        width: 100%; /* Take full width */
+        height: 500px;
+        border-left-width: 0; /* Remove left border */
+        border-right-width: 0; /* Remove right border */
+        padding: 25px 0px 0px 0px;
+    }
+
+    .four {
+        flex-direction: column; /* Change to column layout */
+        height: auto; /* Allow the container to grow as needed */
+    }
+
+    .explore {
+        width: 100%; /* Take full width */
+        height: 500px;
+        border-left-width: 0; /* Remove left border */
+        border-right-width: 0; /* Remove right border */
+        padding: 25px 0px 0px 0px;
+    }
+
+    .join {
+        width: 100%; /* Take full width */
+        height: 500px;
+        border-left-width: 0; /* Remove left border */
+        border-right-width: 0; /* Remove right border */
+        padding: 25px 0px 0px 0px;
+    }
+
+    #google_translate_element {
+        right: -40px;
+        top: 40px;
+        opacity: 0.9;
+    }
+    /* Add any additional styles for this screen size */
 }
