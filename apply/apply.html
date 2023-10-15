@@ -24,6 +24,8 @@
             height: 100vh;
             margin: 0;
             background-image: url(colors.png);
+            align-content: center;
+            overflow-x: hidden;
         }
 
         .container {
@@ -31,7 +33,7 @@
             max-width: 600px;
             border: 1px solid #ccc;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
             margin-top: 10%;
             background-color: #ffffff9a;
         }
@@ -56,6 +58,7 @@
         input[type="url"],
         textarea,
         input[type="file"] {
+            box-sizing: border-box;
             width: 100%;
             padding: 8px;
             margin-bottom: 12px;
@@ -82,7 +85,6 @@
 </head>
 <body>
     <div class="container">
-        
         <p class="explanation">
             Apply for UnivacAI<br><br>
 
