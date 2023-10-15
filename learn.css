@@ -341,7 +341,7 @@ a.one:hover, a.one:active {
     display: none !important;
 }
 
-/* Mac 1200px and 1919px */
+/* Mac 1902px and 1919px */
 @media screen and (max-width: 1919px) {
     .desktop {
         width: 100%;
@@ -351,81 +351,290 @@ a.one:hover, a.one:active {
 
 /* Macbook 768px and 1199px */
 @media screen and (max-width: 1199px) {
+
     .desktop {
-        /* Adjust styles for this screen size */
+        width: 100%;
     }
 
     .one {
-        height: 500px;
+        height: 600px;
     }
 
     .two {
-        height: 500px;
+        height: 600px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .wtextbox {
+        justify-content: center;
+        align-items: center;
+        padding: 30px 25px 30px 20px;
+        overflow: hidden;
+        position: relative;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 0px;
+        border-radius: 0;
+        background-color: #d1d1d1;
+        background-position: center center;
+        background-size: cover;
     }
 }
 
 /* iPad ve iPhone 768px (e.g., veya daha azı) */
 @media screen and (max-width: 767px) {
+    .desktop {
+        width: 100%;
+    }
+
     .one {
-        height: 650px;
+        flex-shrink: 0;
+        width: 100%;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        padding: 0px;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 0;
+        border-radius: 0px;
+    }
+
+    .two {
+        flex-shrink: 0;
+        width: 100%;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        padding: 0px;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 0;
+        border-radius: 0px;
+    }
+
+    .photo1 {
+        box-sizing: border-box;
+        flex-shrink: 0;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 50px 0px 0px 0px;
+        overflow: hidden;
+        position: relative;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 0;
+        border-radius: 0;
+        background-image: url(images/home/code.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .wphoto2 {
+        box-sizing: border-box;
+        flex-shrink: 0;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0px 0px 0px 0px;
+        overflow: hidden;
+        position: relative;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 0;
+        border-radius: 0;
+        background-image: url(images/home/books.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .photo3 {
+        box-sizing: border-box;
+        flex-shrink: 0;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0px 0px 0px 0px;
+        overflow: hidden;
+        position: relative;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 0;
+        border-radius: 0;
+        background-image: url(images/home/ml.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .wphoto4 {
+        box-sizing: border-box;
+        flex-shrink: 0;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0px 0px 0px 0px;
+        overflow: hidden;
+        position: relative;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 0;
+        border-radius: 0;
+        background-image: url(images/home/read.jpg);
+        background-position: center center;
+        background-size: cover;
     }
     
-    .two {
-        height: 650px;
+    .textbox {
+        box-sizing: border-box;
+        flex-shrink: 0;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px 20px 20px;
+        overflow: hidden;
+        position: relative;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 0px;
+        border-radius: 0;
+        background-color: #d1d1d1;
+        background-position: center center;
+        background-size: cover;
     }
 
-    .logotxt {
-        font-size: 25px;
-        width: 350px;
+    .wtextbox {
+        box-sizing: border-box;
+        flex-shrink: 0;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px 20px 20px;
+        overflow: hidden;
+        position: relative;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 0px;
+        border-radius: 0;
+        background-color: #d1d1d1;
+        background-position: center center;
+        background-size: cover;
     }
 
-    .mission {
-        font-size: 25px;
-        width: 350px;
+    h1 {
+        flex-shrink: 0;
+        width: 100%;
+        height: 50px;
+        max-width: 100%;
+        overflow: hidden;
+        position: relative;
+        font-weight: 400;
+        font-style: normal;
+        color: #0a0a0a;
+        font-size: 35px;
+        letter-spacing: 0px;
+        line-height: 1.2;
+        text-align: left;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    p {
+        flex-shrink: 0;
+        width: 100%;
+        height: 150px;
+        max-width: 100%;
+        overflow: hidden;
+        color: #0a0a0a;
+        position: relative;
+        font-weight: 100;
+        font-style: normal;
+        font-size: 18px;
+        letter-spacing: 0px;
+        line-height: 1.2;
+        text-align:left;
+        font-family: 'Roboto', sans-serif;
     }
 
-    /* Set the 3rd and 4th parts to stack on top of each other */
-    .three {
-        flex-direction: column; /* Change to column layout */
-        height: auto; /* Allow the container to grow as needed */
+    a.one:link, a.one:visited {
+        background-color: white;
+        color: #171a20;
+        border: 3px solid #171a20;
+        border-radius: 8px;
+        padding: 10px 100px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-family: 'Roboto', sans-serif;
+        width: 50%;
+        height: 15px;
+    }
+      
+    a.one:hover, a.one:active {
+        background-color: #171a20;
+        color: white;
     }
 
-    /* Adjust styles for individual elements within the 3rd and 4th parts */
-    .learn {
-        width: 100%; /* Take full width */
-        height: 500px;
-        border-left-width: 0; /* Remove left border */
-        border-right-width: 0; /* Remove right border */
-        padding: 25px 0px 0px 0px;
+    #google_translate_element {
+        width: auto;
+        height: auto;
+        position: absolute;
+        left: 20px;
+        top: 0px;
+        opacity: 0.9;
     }
 
-    .build {
-        width: 100%; /* Take full width */
-        height: 500px;
-        border-left-width: 0; /* Remove left border */
-        border-right-width: 0; /* Remove right border */
-        padding: 25px 0px 0px 0px;
+    .buttons {
+        box-sizing: border-box;
+        flex-shrink: 0;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 0px 0px 0px;
+        overflow: hidden;
+        position: relative;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        border-radius: 0;
+        background-color: #d1d1d1;
+        background-position: center center;
+        background-size: cover;
     }
 
-    .four {
-        flex-direction: column; /* Change to column layout */
-        height: auto; /* Allow the container to grow as needed */
-    }
-
-    .explore {
-        width: 100%; /* Take full width */
-        height: 500px;
-        border-left-width: 0; /* Remove left border */
-        border-right-width: 0; /* Remove right border */
-        padding: 25px 0px 0px 0px;
-    }
-
-    .join {
-        width: 100%; /* Take full width */
-        height: 500px;
-        border-left-width: 0; /* Remove left border */
-        border-right-width: 0; /* Remove right border */
-        padding: 25px 0px 0px 0px;
-    }
-    /* Add any additional styles for this screen size */
 }
