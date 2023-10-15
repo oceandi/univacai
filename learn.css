@@ -620,7 +620,7 @@ a.one:hover, a.one:active {
         text-decoration: none;
         display: inline-block;
         font-family: 'Roboto', sans-serif;
-        flex-grow: 1;
+        width: 40%;
         height: 15px;
     }
       
@@ -641,7 +641,7 @@ a.one:hover, a.one:active {
     .buttons {
         box-sizing: border-box;
         flex-shrink: 0;
-        flex-grow: 1;
+        width: 100%;
         height: fit-content;
         display: flex;
         flex-direction: column;
