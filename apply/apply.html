@@ -85,6 +85,13 @@
 </head>
 <body>
     <div class="container">
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.VERTICAL}, 'google_translate_element');
+        }
+        </script>
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <p class="explanation">
             Apply for UnivacAI<br><br>
 
@@ -92,13 +99,6 @@
 
             If we would like to know more about your skills and experience, we will contact you within 3 weeks of receiving the application.<br><br>
         </p>
-        <div id="google_translate_element"></div>
-        <script type="text/javascript">
-        function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
-        }
-        </script>
-        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <form action="https://formspree.io/f/xpzgkyye" method="POST" enctype="multipart/form-data">
             <!-- First Name -->
             <label for="first_name">First Name:</label>
