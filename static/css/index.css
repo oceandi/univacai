@@ -22,48 +22,70 @@ html, body {
     font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 }
 
-/* Google Translate API css rules stating */
-
-
-#goog-gt-tt, .goog-te-balloon-frame{
-    display: none !important;
+.chat-box {
+    background-color: #232526;
+    border-radius: 15px;
+    padding: 15px;
+    height: 400px;
+    overflow-y: auto;
 }
 
-.goog-text-highlight{ 
-    background: none !important;
-    box-shadow: none !important;
+.user-message {
+    text-align: right;
+    background-color: #232526;
 }
 
-#google_translate_element {
-    width: auto;
-    height: auto;
-    position: absolute;
-    right: 40px;
-    top: 40px;
-    opacity: 0.9;
+.bot-message {
+    text-align: left;
+    background-color: #232526;
 }
 
-#google_translate_element select{
-    background-color:#f2f2f4;
-    color:#141414;
-    border: none;
-    border-radius:3px;
-    padding:5px 7px
+.user-message p, .bot-message p {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 15px;
+    color:#cacfd6
 }
 
-.goog-logo-link{
-    display: none !important;
+.form-control {
+    background-color: #232526;
+    border-color: #454550;
+    border-radius: 15px;
+    border-width: 1px;
+    resize: none;
+    min-height: 52px !important;
+    max-height: 53px !important;
+    padding-left: 30px; 
+    padding-bottom: 13px;
+    padding-top: 13px;
+    overflow-y: auto;
 }
 
-.goog-te-gadget{
-    color: transparent !important;
+.form-control:focus {
+    background-color: #232526; /* Odaklanıldığında istediğiniz arka plan rengi */
+    color: #cacfd6; /* Metin rengi */
+    border-color: #585763; /* İsteğe bağlı sınır rengi */
+    outline: none;
+    box-shadow: none;
 }
 
-.goog-te-banner-frame{
-    display: none !important;
+.send-icon {
+  height: 24px;
+  width: 24px;
+  fill: #ffffff;
 }
 
-/* Google Translate API css rules finished */
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  flex-shrink: 0;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
 
 .chat-input-container {
     width: 80%;
