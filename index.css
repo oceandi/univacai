@@ -11,7 +11,7 @@ html, body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: #141414;
+    background-color: #232526;
     overflow: hidden;
     padding: 0;
     align-content: center;
@@ -19,6 +19,7 @@ html, body {
     gap: 0;
     position: absolute;
     border-radius: 0px;
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 }
 
 /* Google Translate API css rules stating */
@@ -64,6 +65,42 @@ html, body {
 
 /* Google Translate API css rules finished */
 
+.chat-input-container {
+    width: 80%;
+    max-width: 600px;
+}
+
+.chat-input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 22px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.chat-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.send-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.send-icon {
+    height: 24px;
+    width: 24px;
+    fill: #555;
+}
+
 .logo {
     flex-shrink: 0;
     width: 215px;
@@ -83,10 +120,10 @@ html, body {
     height: 735px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     padding: 0px 0px 75px 0px;
-    background-color: #000000;
+    background-color: #232526;
     overflow: hidden;
     position: relative;
     align-content: center;
@@ -99,26 +136,6 @@ html, body {
     border-bottom-width: 6px;
     border-right-width: 0px;
     border-left-width: 0px;
-}
-
-.logotxt {
-    flex-shrink: 0;
-    width: 350px;
-    height: auto;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-word;
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-    font-weight: lighter;
-    font-style: normal;
-    color: #f2f2f4;
-    font-size: 35px;
-    letter-spacing: 0px;
-    line-height: 1.2;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
 }
 
 .learnmore{
