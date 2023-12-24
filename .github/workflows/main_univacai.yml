@@ -15,19 +15,19 @@
       runs-on: ubuntu-latest
   
       steps:
-        - uses: actions/checkout@v3
-  
-        - name: Set up Node.js
-          uses: actions/setup-node@v3
-          with:
-            node-version: '21.4.0' # Node.js'nin istediğiniz sürümüne güncelleyin
+        - uses: actions/checkout@v3  # v2'den v3'e yükseltildi
   
         - name: Set up Python
-          uses: actions/setup-python@v3
+          uses: actions/setup-python@v2
           with:
-            python-version: '3.11.5' # Python sürümünü 3.11.5 olarak güncelle
+            python-version: '3.11.5'
   
-        - name: Install dependencies
+        - name: Set up Node.js
+          uses: actions/setup-node@v2
+          with:
+            node-version: '16'
+  
+        - name: Install Python dependencies
           run: pip install -r requirements.txt
   
         # Opsiyonel: Testlerinizi burada çalıştırabilirsiniz
@@ -38,7 +38,7 @@
           run: zip -r release.zip . --exclude=*venv* --exclude=*node_modules*
   
         - name: Upload artifact for deployment jobs
-          uses: actions/upload-artifact@v3
+          uses: actions/upload-artifact@v2
           with:
             name: python-app
             path: release.zip
@@ -49,7 +49,7 @@
   
       steps:
         - name: Download artifact from build job
-          uses: actions/download-artifact@v3
+          uses: actions/download-artifact@v2
           with:
             name: python-app
   
@@ -64,5 +64,5 @@
         - name: Deploy to Azure Web App
           uses: azure/webapps-deploy@v2
           with:
-            app-name: 'univacai' # Azure Web App adınız
+            app-name: 'univacai'  # Azure Web App adınız
             publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CCE45753191D4710815642A2D70D4930 }}
