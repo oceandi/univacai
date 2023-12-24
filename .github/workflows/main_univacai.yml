@@ -21,11 +21,6 @@ jobs:
         uses: actions/setup-python@v2  # Python kurulum eylemini güncellenmiş sürümle kullan
         with:
           python-version: '3.11'
-
-      - name: Check current directory and list files
-        run: |
-          pwd
-          ls -l
         
       - name: Install dependencies
         run: pip install -r requirements.txt  # Bağımlılıkları yükle
