@@ -1,68 +1,46 @@
-  # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-  # More GitHub Actions for Azure: https://github.com/Azure/actions
-  # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
+name: Build and deploy Python app to Azure Web App - univacai
 
-  name: Build and deploy Python Flask app to Azure Web App
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
-  on:
-    push:
-      branches:
-        - main
-    workflow_dispatch:
-  
-  jobs:
-    build:
-      runs-on: ubuntu-latest
-  
-      steps:
-        - uses: actions/checkout@v3  # v2'den v3'e yükseltildi
-  
-        - name: Set up Python
-          uses: actions/setup-python@v2
-          with:
-            python-version: '3.11.5'
-  
-        - name: Set up Node.js
-          uses: actions/setup-node@v2
-          with:
-            node-version: '16'
-  
-        - name: Install Python dependencies
-          run: pip install -r requirements.txt
-  
-        # Opsiyonel: Testlerinizi burada çalıştırabilirsiniz
-        # - name: Run tests
-        #   run: pytest
-  
-        - name: Zip artifact for deployment
-          run: zip -r release.zip . --exclude=*venv* --exclude=*node_modules*
-  
-        - name: Upload artifact for deployment jobs
-          uses: actions/upload-artifact@v2
-          with:
-            name: python-app
-            path: release.zip
-  
-    deploy:
-      runs-on: ubuntu-latest
-      needs: build
-  
-      steps:
-        - name: Download artifact from build job
-          uses: actions/download-artifact@v2
-          with:
-            name: python-app
-  
-        - name: Unzip artifact for deployment
-          run: unzip release.zip
-  
-        - name: Log in to Azure CLI
-          uses: azure/login@v1
-          with:
-            creds: ${{ secrets.AZURE_CREDENTIALS }}
-  
-        - name: Deploy to Azure Web App
-          uses: azure/webapps-deploy@v2
-          with:
-            app-name: 'univacai'  # Azure Web App adınız
-            publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CCE45753191D4710815642A2D70D4930 }}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4  # Güncellenmiş versiyon
+
+      - name: Set up Python version
+        uses: actions/setup-python@v2  # v1'den v2'ye güncellenmiş versiyon
+        with:
+          python-version: '3.11'  # Python sürümünüz
+
+      # Sanal ortam adımlarını ve diğer adımları ekleyin
+      # ...
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: 'Production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v3
+        with:
+          name: python-app
+
+      - name: Unzip artifact for deployment
+        run: unzip release.zip
+      
+      # Azure'a dağıtımı gerçekleştiren adım
+      - name: 'Deploy to Azure Web App'
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'univacai'  # Azure Web App adınız
+          slot-name: 'Production'  # Eğer bir deployment slot kullanıyorsanız
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CCE45753191D4710815642A2D70D4930 }}
