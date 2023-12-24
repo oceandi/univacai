@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2  # Eylemi güncellenmiş sürümle kullan
+      - uses: actions/checkout@v3  # Eylemi güncellenmiş sürümle kullan
 
       - name: Set up Python version
-        uses: actions/setup-python@v2  # Python kurulum eylemini güncellenmiş sürümle kullan
+        uses: actions/setup-python@v3  # Python kurulum eylemini güncellenmiş sürümle kullan
         with:
           python-version: '3.11'
 
@@ -27,6 +27,16 @@ jobs:
           pwd
           ls -l
         
+      - name: Cache some dependencies
+        uses: actions/cache@v3
+        with: 
+          path: |
+            venv
+            requirements.txt
+          key: ${{ runner.os }}-venv-${{ hashFiles('**/requirements.txt') }}
+          restore-keys : |
+            ${{ runner.os }}-venv-
+
       - name: Install dependencies
         run: pip install -r requirements.txt  # Bağımlılıkları yükle
 
