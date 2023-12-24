@@ -11,7 +11,7 @@ html, body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: #232526;
+    background-color: #2e2e39;
     overflow: hidden;
     padding: 0;
     align-content: center;
@@ -22,47 +22,58 @@ html, body {
     font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 }
 
+.container {
+    height: 825px;
+}
+
 .chat-box {
-    background-color: #232526;
+    background-color: #2e2e39;
     border-radius: 15px;
     padding: 15px;
-    height: 400px;
+    height: 675px;
     overflow-y: auto;
 }
 
 .user-message {
-    text-align: right;
-    background-color: #232526;
+    text-align: left;
+    padding-left: 50px;
+    background-color: #2e2e39;
 }
 
 .bot-message {
     text-align: left;
-    background-color: #232526;
+    padding-left: 50px;
+    background-color: #2e2e39;
 }
 
 .user-message p, .bot-message p {
-    display: inline-block;
+    border-radius: 15px;
+    color:#cacfd6;
     padding: 10px;
     border-radius: 15px;
-    color:#cacfd6
+    color: #cacfd6;
+    white-space: pre-wrap;
 }
 
 .form-control {
-    background-color: #232526;
+    background-color: #2e2e39;
     border-color: #454550;
     border-radius: 15px;
     border-width: 1px;
     resize: none;
     min-height: 52px !important;
-    max-height: 53px !important;
+    max-height: 52px !important;
     padding-left: 30px; 
     padding-bottom: 13px;
     padding-top: 13px;
     overflow-y: auto;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
 }
 
 .form-control:focus {
-    background-color: #232526; /* Odaklanıldığında istediğiniz arka plan rengi */
+    background-color: #2e2e39; /* Odaklanıldığında istediğiniz arka plan rengi */
     color: #cacfd6; /* Metin rengi */
     border-color: #585763; /* İsteğe bağlı sınır rengi */
     outline: none;
@@ -81,6 +92,7 @@ html, body {
   cursor: pointer;
   outline: none;
   flex-shrink: 0;
+  margin: auto;
 }
 
 .btn:focus {
@@ -145,7 +157,7 @@ html, body {
     justify-content: center;
     align-items: center;
     padding: 0px 0px 75px 0px;
-    background-color: #232526;
+    background-color: #2e2e39;
     overflow: hidden;
     position: relative;
     align-content: center;
@@ -160,44 +172,16 @@ html, body {
     border-left-width: 0px;
 }
 
-.learnmore{
-    flex-shrink: 0;
-    width: 333px;
-    height: auto;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-word;
-    max-width: 100%;
-    overflow: hidden;
-    color: #1A73E8;
-    position: relative;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 21px;
-    letter-spacing: 0px;
-    line-height: 1.2;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-}
-
 a:link {
-    color: #1A73E8;
-    text-decoration: none;
 }
   
 a:visited {
-    text-decoration: none;
-    color: #1A73E8;
 }
   
 a:hover {
-    text-decoration: underline;
-    color: #1A73E8;
 }
   
 a:active {
-    text-decoration: underline;
-    color: #1A73E8;
 }
 
 .github {
@@ -303,7 +287,7 @@ a:active {
     gap: 64;
     border-radius: 0;
     border-color: #0b0b0b;
-    background-image: url(images/home/learn.jpg);
+    background-image: url(https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/learn.jpg);
     background-position: center center;
     background-size: cover;
     border-style: solid;
@@ -349,7 +333,7 @@ a:active {
     gap: 32px;
     border-radius: 0;
     border-color: #0b0b0b;
-    background-image: url(images/home/build.jpg);
+    background-image: url(https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/build.jpg);
     background-position: center center;
     background-size: cover;
     border-style: solid;
@@ -412,7 +396,7 @@ a:active {
     gap: 64;
     border-radius: 0;
     border-color: #0b0b0b;
-    background-image: url(images/home/explore.jpg);
+    background-image: url(https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/explore.jpg);
     background-position: center center;
     background-size: cover;
     border-style: solid;
@@ -458,7 +442,7 @@ a:active {
     gap: 16px;
     border-radius: 0;
     border-color: #0b0b0b;
-    background-image: url(images/home/join.jpg);
+    background-image: url(https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/join.jpg);
     background-position: center center;
     background-size: cover;
     border-style: solid;
@@ -502,7 +486,7 @@ a:active {
     align-content: center;
     flex-wrap: nowrap;
     gap: 0;
-    background-image: url(images/home/openai.png);
+    background-image: url(https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/openai.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -534,8 +518,12 @@ a:active {
 
 /* iPad ve iPhone 768px (e.g., veya daha azı) */
 @media screen and (max-width: 767px) {
-    .one {
+    .container {
         height: 650px;
+    }
+
+    .chat-box {
+        height: 500px;
     }
     
     .two {
@@ -596,10 +584,5 @@ a:active {
         padding: 25px 0px 0px 0px;
     }
 
-    #google_translate_element {
-        right: -40px;
-        top: 40px;
-        opacity: 0.9;
-    }
     /* Add any additional styles for this screen size */
 }

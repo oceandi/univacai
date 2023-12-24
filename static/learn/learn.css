@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    background-color: #fafafc;
 }
 
 .desktop {
@@ -11,7 +12,6 @@ html, body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: #141414;
     overflow: hidden;
     padding: 0;
     align-content: center;
@@ -54,7 +54,7 @@ html, body {
     flex-wrap: wrap;
     gap: 0;
     border-radius: 0;
-    background-image: url(images/home/code.jpg);
+    background-image: url(https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/code.jpg);
     background-position: center center;
     background-size: cover;
 }
@@ -75,7 +75,6 @@ html, body {
     flex-wrap: wrap;
     gap: 32px;
     border-radius: 0;
-    background-color: #d1d1d1;
     background-position: center center;
     background-size: cover;
 }
@@ -96,7 +95,6 @@ html, body {
     flex-wrap: wrap;
     gap: 0px;
     border-radius: 0;
-    background-color: #d1d1d1;
     background-position: center center;
     background-size: cover;
 }
@@ -134,7 +132,7 @@ html, body {
     flex-wrap: wrap;
     gap: 64;
     border-radius: 0;
-    background-image: url(images/home/books.jpg);
+    background-image: url(https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/books.jpg);
     background-position: center center;
     background-size: cover;
 }
@@ -155,7 +153,7 @@ html, body {
     flex-wrap: wrap;
     gap: 0;
     border-radius: 0;
-    background-image: url(images/home/ml.jpg);
+    background-image: url(https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/ml.jpg);
     background-position: center center;
     background-size: cover;
 }
@@ -176,7 +174,7 @@ html, body {
     flex-wrap: wrap;
     gap: 64;
     border-radius: 0;
-    background-image: url(images/home/read.jpg);
+    background-image: url(https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/read.jpg);
     background-position: center center;
     background-size: cover;
 }
@@ -196,7 +194,7 @@ html, body {
     align-content: center;
     flex-wrap: nowrap;
     gap: 0;
-    background-image: url(images/home/openai.png);
+    background-image: url(https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/openai.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -277,7 +275,6 @@ a.one:hover, a.one:active {
     flex-wrap: wrap;
     gap: 10px;
     border-radius: 0;
-    background-color: #d1d1d1;
     background-position: center center;
     background-size: cover;
 }
@@ -298,7 +295,6 @@ a.one:hover, a.one:active {
     flex-wrap: wrap;
     gap: 10px;
     border-radius: 0;
-    background-color: #d1d1d1;
     background-position: center center;
     background-size: cover;
 }
@@ -358,7 +354,6 @@ a.one:hover, a.one:active {
     flex-wrap: nowrap;
     gap: 0px;
     border-radius: 0;
-    background-color: #d1d1d1;
     background-position: center center;
     background-size: cover;
 }
@@ -404,7 +399,6 @@ a.one:hover, a.one:active {
         flex-wrap: wrap;
         gap: 0px;
         border-radius: 0;
-        background-color: #d1d1d1;
         background-position: center center;
         background-size: cover;
     }
@@ -466,7 +460,7 @@ a.one:hover, a.one:active {
         flex-wrap: wrap;
         gap: 0;
         border-radius: 0;
-        background-image: url(images/home/code.jpg);
+        background-image: url(https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/code.jpg);
         background-position: center center;
         background-size: cover;
     }
@@ -487,7 +481,7 @@ a.one:hover, a.one:active {
         flex-wrap: wrap;
         gap: 0;
         border-radius: 0;
-        background-image: url(images/home/books.jpg);
+        background-image: url(https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/books.jpg);
         background-position: center center;
         background-size: cover;
     }
@@ -529,7 +523,7 @@ a.one:hover, a.one:active {
         flex-wrap: wrap;
         gap: 0;
         border-radius: 0;
-        background-image: url(images/home/ml.jpg);
+        background-image: url(https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/ml.jpg);
         background-position: center center;
         background-size: cover;
     }
@@ -550,7 +544,7 @@ a.one:hover, a.one:active {
         flex-wrap: wrap;
         gap: 0;
         border-radius: 0;
-        background-image: url(images/home/read.jpg);
+        background-image: url(https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/read.jpg);
         background-position: center center;
         background-size: cover;
     }
@@ -571,7 +565,6 @@ a.one:hover, a.one:active {
         flex-wrap: wrap;
         gap: 0px;
         border-radius: 0;
-        background-color: #d1d1d1;
         background-position: center center;
         background-size: cover;
     }
@@ -592,7 +585,6 @@ a.one:hover, a.one:active {
         flex-wrap: wrap;
         gap: 0px;
         border-radius: 0;
-        background-color: #d1d1d1;
         background-position: center center;
         background-size: cover;
     }
@@ -675,9 +667,7 @@ a.one:hover, a.one:active {
         flex-wrap: wrap;
         gap: 10px;
         border-radius: 0;
-        background-color: #d1d1d1;
         background-position: center center;
         background-size: cover;
     }
-
 }
