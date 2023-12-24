@@ -19,13 +19,10 @@ def get_chat_response(message):
         "model": "gpt-3.5-turbo-1106",
         "messages": [{"role": "user", "content": message}]
     }
-
-    try:
-        response = requests.post("https://api.openai.com/v1/chat/completions", json=data, headers=headers)
-        response.raise_for_status()  # Bu satır HTTP hata kodlarını yakalar.
+    response = requests.post("https://api.openai.com/v1/chat/completions", json=data, headers=headers)
+    if response.status_code == 200:
         return response.json()['choices'][0]['message']['content']
-    except requests.exceptions.RequestException as e:
-        app.logger.error(f"Hata oluştu: {e}")  # Hataları günlüğe kaydetmek için
+    else:
         return "Üzgünüm, bir yanıt alamadım."
 
 @app.route("/")
