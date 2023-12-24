@@ -27,8 +27,6 @@ flatbuffers==23.5.26
 fonttools==4.46.0
 gast==0.5.4
 google-pasta==0.2.0
-grpcio==1.60.0
-grpcio-status==1.60.0
 h11==0.14.0
 h5py==3.10.0
 httpcore==1.0.2
@@ -45,7 +43,6 @@ jsonify==0.5
 jupyter_client==8.6.0
 jupyter_core==5.5.0
 keras==3.0.1
-kfp-pipeline-spec==0.2.2
 kfp-server-api==2.0.5
 kiwisolver==1.4.5
 kubernetes==28.1.0
@@ -76,7 +73,6 @@ Pillow==10.1.0
 platformdirs==4.1.0
 prompt-toolkit==3.0.43
 proto-plus==1.23.0
-protobuf==4.25.1
 psutil==5.9.6
 ptyprocess==0.7.0
 pure-eval==0.2.2
