@@ -15,12 +15,12 @@
       runs-on: ubuntu-latest
 
       steps:
-        - uses: actions/checkout@v4
+        - uses: actions/checkout@v2
 
-        - name: Set up Python version
-          uses: actions/setup-python@v1
+        - name: Set up Node.js
+          uses: actions/setup-node@v2
           with:
-            python-version: '3.11'
+            node-version: '16'
 
         - name: Create and start virtual environment
           run: |
