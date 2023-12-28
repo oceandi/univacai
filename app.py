@@ -36,5 +36,17 @@ def api():
     response = get_chat_response(message)
     return jsonify({'answer': response})
 
+@app.route('/auth-response')
+def auth_response():
+    # OAuth sağlayıcısından gelen kodu burada alabilirsiniz
+    code = request.args.get('code')
+
+    # Bu kod ile bir token almak için OAuth sağlayıcısına bir istek gönderin
+    # Token alma işlemi burada gerçekleştirilir
+
+    # Token başarılı bir şekilde alındıysa, kullanıcıyı başka bir sayfaya yönlendirebilirsiniz
+    # Örneğin kullanıcının profil sayfasına veya ana sayfaya
+    return redirect(url_for('index'))
+
 if __name__ == '__main__':
     app.run(debug=True)
