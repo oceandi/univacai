@@ -7,105 +7,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content=" Let's shape a new era for a better future.  ">
         <link rel="icon" href="https://raw.githubusercontent.com/oceandi/links/main/univacai/images/logo/logo01.ico">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/lib/languages/python.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     </head>
-    <body >
+    <body>
         <div class="desktop">
-            <div class="container mt-5">
-                <div class="chat-box mt-3">
-                  <!-- Chat messages will be added here dynamically -->
+            <div class="container">
+                <div class="chat-box">
+                    <!-- Sohbet kutusu içeriği burada -->
                 </div>
-                <div class="form-group mt-3" style="display: flex; align-items: center;">
-                  <textarea class="form-control" rows="3" placeholder="Message UnivacAI..." id="message-input"></textarea>
-                  <button type="button" class="btn" id="send-btn">
-                    <svg class="send-icon" viewBox="0 0 24 24">
-                      <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            <div class="two" id="git">
-                <img class="github" src="https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/github.gif">
-                <p class="mission">Our mission is to develop general artificial intelligence and make it universally understandable and usable.</p>
-                <p class="learnmore">It starts with code</p>
-                <a href="#learncode"><img class="arrow" src="https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/arrow.png"></a>
-            </div>
-            <div class="three" id="learncode">
-                <div class="learn">
-                    <a href="/static/learn/learn.html">
-                        <p class="learntext">Learn</p>
-                    </a>
-                </div>
-                <div class="build">
-                    <a href="https://github.com/oceandi?tab=repositories">
-                        <p class="buildtxt">Build</p>
-                    </a>
+                <div class="form-group">
+                    <textarea id="message-input" class="form-control" placeholder="Message UnivacAI…"></textarea>
+                    <button id="send-btn" class="btn"><svg class="send-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
                 </div>
             </div>
-            <div class="four">
-                <div class="explore">
-                    <a href="https://www.deeplearning.ai/">
-                        <p class="exploretxt">Explore</p>
-                    </a>
-                </div>
-                <div class="join">
-                    <a href="apply/apply.html">
-                        <p class="jointext">Join</p>
-                    </a>
-                </div>
-            </div>
-            <div class="five"></div>
         </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-              const chatBox = document.querySelector(".chat-box");
-              const messageInput = document.querySelector("#message-input");
-              const sendBtn = document.querySelector("#send-btn");
-        
-              function addMessage(message, isUser) {
-                const msgDiv = document.createElement("div");
-                msgDiv.classList.add("message", isUser ? "user-message" : "bot-message");
-                msgDiv.innerHTML = `<p>${message}</p>`;
-                chatBox.appendChild(msgDiv);
-                chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
-              }
-        
-              sendBtn.addEventListener("click", function() {
-                const message = messageInput.value.trim();
-                if (message) {
-                  addMessage(message, true); // Add user message
-                  fetch('/api', {
-                    method: 'POST',
-                    headers: {
-                      'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ message: message }),
-                  })
-                  .then(response => response.json())
-                  .then(data => {
-                    addMessage(data.answer, false); // Add bot response
-                  })
-                  .catch((error) => {
-                    console.error('Error:', error);
-                  });
-                  messageInput.value = ""; // Clear input field
-                }
-              });
-        
-              messageInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter' && !e.shiftKey) {
-                  sendBtn.click();
-                  e.preventDefault();
-                }
-              });
-            });
-          </script>
+        <script src="{{ url_for('static', filename='js/index.js') }}"></script>
     </body>
 </html>
