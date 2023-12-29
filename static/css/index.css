@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    background-color: #2e2e39;
 }
 
 .desktop {
@@ -175,10 +176,11 @@ html, body {
 
 /* Macbook 768px and 1199px */
 @media screen and (max-width: 1199px) {
-    .desktop {
-        /* Adjust styles for this screen size */
+    .container {
+        padding: 56px 28px 28px 28px;
+        width: 97%;
+        height: fit-content;
     }
-
 }
 
 /* iPad ve iPhone 768px (e.g., veya daha azı) */
