@@ -185,8 +185,8 @@ html, body {
 
 /* iPad ve iPhone 768px (e.g., veya daha azı) */
 @media screen and (max-width: 767px) {
-    .desktop {
-        /* Adjust styles for this screen size */
+    .chat-box {
+        block-size: calc(100vh - 200px); /* Sayfa yüksekliğine bağlı olarak ayarlayın (form kontrol alanını da hesaba katar) */
     }
 
     /* Add any additional styles for this screen size */
