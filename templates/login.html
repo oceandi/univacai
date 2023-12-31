@@ -142,8 +142,12 @@
             <div class="get">
                 <h2>Get started</h2>
                 <div class="buttons">
-                    <button id="login"><a href="{{ url_for('auth0_login') }}">Log in</a></button>
-                    <button id="signup"><a href="{{ url_for('auth0_login') }}">Sign up</a></button>
+                    <a href="{{ url_for('auth0_login') }}">
+                        <button id="login">Log in</button>
+                    </a>
+                    <a href="{{ url_for('auth0_login') }}">
+                        <button id="signup">Sign up</button>
+                    </a>
                 </div>
             </div>
             <div class="info">
