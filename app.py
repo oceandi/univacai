@@ -27,7 +27,7 @@ def get_chat_response(message):
 
 @app.route("/")
 def index():
-    return render_template("origin.html")
+    return render_template("index.html")
 
 @app.route("/api", methods=["POST"])
 def api():
