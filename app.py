@@ -3,6 +3,7 @@ import requests
 import os
 import openai
 from dotenv import load_dotenv
+import json
 
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
@@ -27,7 +28,14 @@ def get_chat_response(message):
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    if 'user' in session:
+        return render_template('index.html', session=session.get('user'), pretty=json.dumps(session.get('user'), indent=4))
+    else:
+        return redirect(url_for('login_page'))
+    
+@app.route("/login")
+def login_page():
+    return render_template('login.html')
 
 @app.route("/api", methods=["POST"])
 def api():
