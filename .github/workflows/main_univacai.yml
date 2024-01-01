@@ -32,13 +32,13 @@ jobs:
         with: 
           path: |
             venv
-            requirements.txt
-          key: ${{ runner.os }}-venv-${{ hashFiles('**/requirements.txt') }}
+            rq.txt
+          key: ${{ runner.os }}-venv-${{ hashFiles('**/rq.txt') }}
           restore-keys : |
             ${{ runner.os }}-venv-
 
       - name: Install dependencies
-        run: pip install -r requirements.txt  # Bağımlılıkları yükle
+        run: pip install -r rq.txt  # Bağımlılıkları yükle
 
       - name: Zip artifact for deployment
         run: zip -r release.zip ./* -x \*venv/\* \*__pycache__/\* \*.git/\* \*node_modules/\*  # Sanal ortam ve gereksiz dosyaları hariç tut
