@@ -3,15 +3,11 @@ import requests
 import os
 import openai
 from dotenv import load_dotenv
-import json
-from urllib.parse import quote_plus, urlencode
-from authlib.integrations.flask_client import OAuth
 
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
-app.secret_key = os.getenv("APP_SECRET_KEY")
 
 # OpenAI API'yi kullanarak sohbet tamamlama işlevi
 def get_chat_response(message):
@@ -28,35 +24,10 @@ def get_chat_response(message):
         return response.json()['choices'][0]['message']['content']
     else:
         return "Üzgünüm, bir yanıt alamadım."
-    
-oauth = OAuth(app)
-oauth.register(
-    "auth0",
-    client_id=os.getenv("AUTH0_CLIENT_ID"),
-    client_secret=os.getenv("AUTH0_CLIENT_SECRET"),
-    client_kwargs={"scope": "openid profile email"},
-    server_metadata_url=f'https://{os.getenv("AUTH0_DOMAIN")}/.well-known/openid-configuration',
-)
 
 @app.route("/")
 def index():
-    return render_template(
-        "origin.html",
-        session=session.get("user"),
-        pretty=json.dumps(session.get("user"), indent=4),
-    )
-    
-@app.route("/login")
-def login():
-    return oauth.auth0.authorize_redirect(
-        redirect_uri=url_for("callback", _external=True)
-    )
-
-@app.route("/callback", methods=["GET", "POST"])
-def callback():
-    token = oauth.auth0.authorize_access_token()
-    session["user"] = token
-    return redirect("/")
+    return render_template("origin.html")
 
 @app.route("/api", methods=["POST"])
 def api():
