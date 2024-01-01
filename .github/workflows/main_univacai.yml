@@ -38,7 +38,7 @@ jobs:
             ${{ runner.os }}-venv-
 
       - name: Install dependencies
-        run: pip install -r requirements.txt  # Bağımlılıkları yükle
+        run: pip install -r requirement.txt  # Bağımlılıkları yükle
 
       - name: Zip artifact for deployment
         run: zip -r release.zip ./* -x \*venv/\* \*__pycache__/\* \*.git/\* \*node_modules/\*  # Sanal ortam ve gereksiz dosyaları hariç tut
