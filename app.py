@@ -14,7 +14,7 @@ api_key = os.getenv("OPENAI_API_KEY")
 app = Flask(__name__, static_folder='static', template_folder='templates')
 app.secret_key = os.getenv("APP_SECRET_KEY")
 
-app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=365)
+app.config['SESSION_COOKIE_SECURE'] = True
 
 oauth = OAuth(app)
 oauth.register(
@@ -54,6 +54,7 @@ def callback():
     token = oauth.auth0.authorize_access_token()
     session["user"] = token
     session['access_token'] = token['access_token']
+    session.permanent = True
     return redirect("/")
 
 @app.route("/logout")
