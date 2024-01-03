@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, redirect, url_for, session
+from flask import Flask, render_template, request, jsonify, redirect, url_for, session, make_response
 import requests
 import os
 import openai
@@ -15,6 +15,7 @@ app = Flask(__name__, static_folder='static', template_folder='templates')
 app.secret_key = os.getenv("APP_SECRET_KEY")
 
 app.config['SESSION_COOKIE_SECURE'] = True
+app.permanent_session_lifetime = timedelta(days=365)
 
 oauth = OAuth(app)
 oauth.register(
@@ -47,6 +48,7 @@ def get_chat_response(message):
 
 @app.route("/login")
 def login_page():
+    session.permanent = True
     return render_template('login.html')
 
 @app.route("/callback", methods=["GET", "POST"])
@@ -55,7 +57,9 @@ def callback():
     session["user"] = token
     session['access_token'] = token['access_token']
     session.permanent = True
-    return redirect("/")
+    response = make_response(redirect("/"))
+    response.set_cookie('access_token', token['access_token'], httponly=True)
+    return response
 
 @app.route("/logout")
 def logout():
