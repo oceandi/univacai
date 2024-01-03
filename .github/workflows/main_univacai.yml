@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3  # Eylemi güncellenmiş sürümle kullan
+      - uses: actions/checkout@v4  # Eylemi güncellenmiş sürümle kullan
 
       - name: Set up Python version
         uses: actions/setup-python@v3  # Python kurulum eylemini güncellenmiş sürümle kullan
@@ -26,22 +26,12 @@ jobs:
         run: |
           pwd
           ls -l
-        
-      - name: Cache some dependencies
-        uses: actions/cache@v3
-        with: 
-          path: |
-            venv
-            requirements.txt
-          key: ${{ runner.os }}-venv-${{ hashFiles('**/requirements.txt') }}
-          restore-keys : |
-            ${{ runner.os }}-venv-
 
       - name: Install dependencies
         run: pip install -r requirements.txt  # Bağımlılıkları yükle
 
       - name: Zip artifact for deployment
-        run: zip -r release.zip ./* -x \*venv/\* \*__pycache__/\* \*.git/\* \*node_modules/\*  # Sanal ortam ve gereksiz dosyaları hariç tut
+        run: zip release.zip ./* -r
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v3
@@ -67,6 +57,8 @@ jobs:
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
+        id: deploy-to-webapp
         with:
           app-name: 'univacai'
+          slot-name: 'production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CCE45753191D4710815642A2D70D4930 }}
