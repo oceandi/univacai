@@ -44,7 +44,7 @@ jobs:
         run: zip -r release.zip ./* -x \*venv/\* \*__pycache__/\* \*.git/\* \*node_modules/\*  # Sanal ortam ve gereksiz dosyaları hariç tut
 
       - name: Upload artifact for deployment jobs
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: python-app
           path: release.zip
@@ -58,7 +58,7 @@ jobs:
 
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: python-app
 

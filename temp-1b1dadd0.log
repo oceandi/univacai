@@ -1,2 +1,0 @@
-{"timestamp": "2023-12-24T09:54:27.184Z", "level": "Message", "containerName": "4c03b9aae578", "machineName": "lw0sdlwk00002F", "message": "Fetching changes."}
-{"timestamp": "2023-12-24T09:54:27.208Z", "level": "Message", "containerName": "4c03b9aae578", "machineName": "lw0sdlwk00002F", "message": "Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/81e8fe9d-c9af-41a3-a67a-32bdfa5ceb45.zip (2.93 MB) to /tmp/zipdeploy/extracted"}
