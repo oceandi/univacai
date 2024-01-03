@@ -53,6 +53,7 @@ def login_page():
 def callback():
     token = oauth.auth0.authorize_access_token()
     session["user"] = token
+    session['access_token'] = token['access_token']
     return redirect("/")
 
 @app.route("/logout")
