@@ -18,6 +18,7 @@ comm==0.2.0
 contourpy==1.2.0
 cryptography==41.0.7
 cycler==0.12.1
+DateTime==5.4
 debugpy==1.8.0
 decorator==5.1.1
 distlib==0.3.8
@@ -128,3 +129,4 @@ websocket-client==1.7.0
 Werkzeug==3.0.1
 wrapt==1.16.0
 xyzservices==2023.10.1
+zope.interface==6.1

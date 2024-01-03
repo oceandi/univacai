@@ -6,12 +6,15 @@ from dotenv import load_dotenv
 import json
 from urllib.parse import quote_plus, urlencode
 from authlib.integrations.flask_client import OAuth
+from datetime import timedelta
 
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 app.secret_key = os.getenv("APP_SECRET_KEY")
+
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=365)
 
 oauth = OAuth(app)
 oauth.register(
