@@ -54,7 +54,7 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: https://univacai.azurewebsites.net
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
       - name: Download artifact from build job
@@ -66,7 +66,7 @@ jobs:
         run: unzip release.zip
 
       - name: Deploy to Azure Web App
-        uses: azure/webapps-deploy@v3
+        uses: azure/webapps-deploy@v2
         with:
           app-name: 'univacai'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CCE45753191D4710815642A2D70D4930 }}
