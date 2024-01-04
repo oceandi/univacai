@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    background-color: #2e2e39;
+    background-color: #525365;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -57,10 +57,9 @@ html, body {
 
 .user-message p, .bot-message p {
     border-radius: 15px;
-    color:#cacfd6;
+    color:#ececf1;
     padding: 10px;
     border-radius: 15px;
-    color: #cacfd6;
     white-space: pre-wrap;
 }
 
@@ -68,16 +67,16 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #454550;
+    border: 1px solid rgba(217, 217, 227, .2);
     border-radius: 15px;
     transition: border-color 0.1s, background-color 0.1s; /* Geçiş efektlerini ekliyoruz */
 }
 
 .form-group:focus-within {
-    border: 1px solid #585763;
+    border: 1px solid rgba(217, 217, 227, .25);
     background-color: #2e2e39; /* Odaklandığında istediğiniz arka plan rengi */
     color: #cacfd6; /* Metin rengi */
-    border-color: #585763; /* İsteğe bağlı sınır rengi */
+    border-color: rgba(217, 217, 227, .25); /* İsteğe bağlı sınır rengi */
     outline: none;
     box-shadow: none;
 }
@@ -86,6 +85,7 @@ html, body {
     font-size: 16px;
     line-height: 1.5rem; /* Varsayılan line-height değeri */
     position: relative;
+    color: rgba(255, 255, 255, .5);
 }
 
 .form-control {
@@ -107,13 +107,13 @@ html, body {
     font-size: 16px;
     flex-grow: 1;
     margin-right: 10px;
-    color: #cacfd6;
+    color: #ececf1;
     line-height: 1.5rem;
 }
 
 .form-control:focus {
     background-color: #2e2e39; /* Odaklanıldığında istediğiniz arka plan rengi */
-    color: #cacfd6; /* Metin rengi */
+    color: #ececf1; /* Metin rengi */
     border-color: #585763; /* İsteğe bağlı sınır rengi */
     outline: none;
     box-shadow: none;
