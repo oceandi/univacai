@@ -7,6 +7,7 @@ import json
 from urllib.parse import quote_plus, urlencode
 from authlib.integrations.flask_client import OAuth
 from datetime import timedelta
+from flask_session import Session
 
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
@@ -16,6 +17,8 @@ app.secret_key = os.getenv("APP_SECRET_KEY")
 
 app.config['SESSION_COOKIE_SECURE'] = True
 app.permanent_session_lifetime = timedelta(days=365)
+app.config['SESSION_TYPE'] = 'filesystem'
+Session(app)
 
 oauth = OAuth(app)
 oauth.register(
@@ -36,13 +39,19 @@ def get_chat_response(message):
         "Content-Type": "application/json",
         "Authorization": f"Bearer {api_key}"
     }
+    chat_history = session.get('chat_history', [])
+    chat_history.append({"role": "user", "content": message})
+
     data = {
-        "model": "gpt-3.5-turbo-1106",
-        "messages": [{"role": "user", "content": message}]
+        "model": "gpt-4-1106-preview",
+        "messages": chat_history
     }
     response = requests.post("https://api.openai.com/v1/chat/completions", json=data, headers=headers)
     if response.status_code == 200:
-        return response.json()['choices'][0]['message']['content']
+        answer = response.json()['choices'][0]['message']['content']
+        chat_history.append({"role": "assistant", "content": answer})
+        session['chat_history'] = chat_history
+        return answer
     else:
         return "Üzgünüm, bir yanıt alamadım."
 
@@ -64,18 +73,9 @@ def callback():
 @app.route("/logout")
 def logout():
     session.clear()
-    return redirect(
-        "https://"
-        + os.getenv("AUTH0_DOMAIN")
-        + "/v2/logout?"
-        + urlencode(
-            {
-                "returnTo": url_for("index", _external=True),
-                "client_id": os.getenv("AUTH0_CLIENT_ID"),
-            },
-            quote_via=quote_plus,
-        )
-    )
+    return_to_url = "https://www.univacai.com"  # Auth0 ile uyumlu olması için HTTP veya HTTPS kullanmalısınız
+    logout_url = f'https://{os.getenv("AUTH0_DOMAIN")}/v2/logout?client_id={os.getenv("AUTH0_CLIENT_ID")}&returnTo={quote_plus(return_to_url)}'
+    return redirect(logout_url)
 
 @app.route("/")
 def index():
