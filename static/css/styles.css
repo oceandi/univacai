@@ -33,7 +33,7 @@ html, body {
 .chat-box {
     padding: 15px;
     block-size: calc(100vh - 150px); /* Sayfa yüksekliğine bağlı olarak ayarlayın (form kontrol alanını da hesaba katar) */
-    overflow-y: visible;
+    overflow-y: auto;
     justify-content: flex-start;
     flex-direction: column;
     align-items: flex-start;
@@ -134,7 +134,7 @@ html, body {
     padding-inline-start: 16px; 
     padding-block-start: 14px;
     padding-bottom: 14px;
-    overflow-y: visible;
+    overflow-y: auto;
     flex-grow: 1;
     display: flex;
     align-items: center;
