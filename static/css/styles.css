@@ -41,21 +41,56 @@ html, body {
     line-height: 1.75;
 }
 
-#message-input {
-    block-size: 24px;
+/* Özel bir kaydırma çubuğu için genel stil tanımı */
+.chat-box::-webkit-scrollbar {
+    width: 8px; /* Kaydırma çubuğunun genişliği */
+    height: 16px;
 }
 
-.user-message {
-    text-align: start;
-    padding-inline-start: 0px;
+/* Kaydırma çubuğunun parçası */
+.chat-box::-webkit-scrollbar-thumb {
+    background:hsla(0,0%,100%,.1); /* Kaydırıcı bölümünün arka plan rengi */
+    border-radius: 6px; /* Köşelerin yuvarlaklığı */
+}
+
+/* Kaydırma çubuğunun parçası fareyle üzerine gelindiğinde */
+.chat-box::-webkit-scrollbar-thumb:hover {
+    background: hsla(0,0%,100%,.1); /* Kaydırıcı bölümünün arka plan rengi (hover durumu) */
+}
+
+/* Kaydırma çubuğu yuvası */
+.chat-box::-webkit-scrollbar-track {
+    background: transparent; /* Kaydırma yuvasının arka plan rengi */
+    border-radius: 6px; /* Köşelerin yuvarlaklığı */
+}
+
+#message-input {
+    block-size: 24px;
 }
 
 .bot-message {
     text-align: start;
     padding-inline-start: 0px;
+    border-radius: 15px;
+    color:#ececf1;
+    padding: 10px;
+    border-radius: 15px;
+    white-space: pre-wrap;
 }
 
-.user-message p, .bot-message p {
+.user-message p {
+    text-align: start;
+    padding-inline-start: 0px;
+    border-radius: 15px;
+    color:#ececf1;
+    padding: 10px;
+    border-radius: 15px;
+    white-space: pre-wrap;
+}
+
+.bot-message p {
+    text-align: start;
+    padding-inline-start: 0px;
     border-radius: 15px;
     color:#ececf1;
     padding: 10px;
@@ -195,6 +230,86 @@ html, body {
     font-weight: 500;
     align-items: center;
     position: relative;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+.rounded-md {
+    border-radius: 0.375rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.text-gray-200 {
+    color: #c5c5d2;
+}
+
+.bg-gray-800 {
+    background-color: #343541;
+}
+
+.dark .bg-token-surface-primary {
+    background-color: #2e2e39;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.font-sans {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.rounded-t-md {
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+.code {
+    font-family: "Söhne Mono", Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
+}
+
+.hljs {
+    font-size: 14px;
+}
+
+pre {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 /* Mac 1200px and 1919px */
