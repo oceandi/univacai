@@ -242,10 +242,24 @@ textarea {
 
 .flex {
     display: flex;
+    border: 0 solid #d9d9e3;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #d9d9e3;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 .items-center {
     align-items: center;
+}
+
+.gap-1 {
+    gap: 0.25rem;
 }
 
 .relative {
@@ -257,11 +271,11 @@ textarea {
 }
 
 .bg-gray-800 {
-    background-color: #343541;
+    background-color: #202123;
 }
 
 .dark .bg-token-surface-primary {
-    background-color: #343541;
+    background-color: #202123;
 }
 
 .px-4 {
@@ -292,7 +306,8 @@ textarea {
 }
 
 .p-4 {
-    padding: 1rem;
+    padding: 0rem;
+    border-radius: 0.375rem;
 }
 
 .overflow-y-auto {
@@ -304,13 +319,120 @@ textarea {
 }
 
 .hljs {
-    font-size: 14px;
+    font-size: 14px !important;
+    background: #000 !important;
+    color: #fff !important;
+    font-weight: 400 !important;
 }
 
 pre {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 10px !important;
+    margin-bottom: 0px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    padding: 0px !important;
 }
+
+.prose :where(.prose>:first-child):not(:where([class~=not-prose] *)) {
+    margin-top: 0;
+}
+
+.prose :where(p):not(:where([class~=not-prose] *)) {
+    margin-bottom: 1.25em;
+    margin-top: 1.25em;
+}
+
+.icon-sm {
+    stroke-width: 2;
+    height: 1rem;
+    width: 1rem;
+}
+
+.hljs-string {
+    color:#00a67d !important;
+    font-weight: 400 !important;
+}
+
+.hljs-keyword {
+    color:#2e95d3 !important;
+    font-weight: 400 !important;
+}
+
+.hljs-title {
+    color:#f22c3d !important;
+    font-weight: 400 !important;
+}
+
+.hljs-title function_ {
+    color: #f22c3d !important;
+    font-weight: 400 !important;
+}
+
+.hljs-title class_ {
+    color: #f22c3d !important;
+    font-weight: 400 !important;
+}
+
+.hljs-params {
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+.hljs-built_in {
+    color: #e9950c !important;
+    font-weight: 400 !important;
+}
+
+.hljs-type {
+    color: #df3079 !important;
+    font-weight: 400 !important;
+}
+
+.hljs-meta {
+    color: hsla(0,0%,100%,.6) !important
+}
+
+.hljs-attribute {
+    color: #00a67d !important;
+    font-weight: 400 !important;
+}
+
+.hljs-name {
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+.hljs-selector-tag {
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+.hljs-tag {
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+.hljs-selector-class {
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+.hljs-number {
+    color: #df3079 !important;
+    font-weight: 400 !important;
+}
+
+.hljs-attr {
+    color: #df3079 !important;
+    font-weight: 400 !important;
+}
+
+.hljs-symbol {
+    color: #f22c3d !important;
+    font-weight: 400 !important;
+}
+
+
 
 /* Mac 1200px and 1919px */
 @media screen and (max-width: 1919px) {
