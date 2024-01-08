@@ -64,10 +64,6 @@ html, body {
     border-radius: 6px; /* Köşelerin yuvarlaklığı */
 }
 
-#message-input {
-    block-size: 24px;
-}
-
 .bot-message {
     text-align: start;
     padding-inline-start: 0px;
@@ -126,14 +122,13 @@ html, body {
 .form-control {
     background-color: #2e2e39;
     border-color: #454550;
-    border-radius: 15px;
+    border-radius: 0px;
     border-width: 0px;
     resize: none;
     width: 100%;
-    max-height: 200px;
-    padding-inline-start: 16px; 
-    padding-block-start: 14px;
-    padding-bottom: 14px;
+    block-size: 24px;
+    max-block-size: 192px;
+    padding-inline-start: 2px; 
     overflow-y: auto;
     flex-grow: 1;
     display: flex;
@@ -141,9 +136,13 @@ html, body {
     font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
     font-size: 16px;
     flex-grow: 1;
-    margin-right: 10px;
     color: #ececf1;
     line-height: 1.5rem;
+    margin: 16px;
+}
+
+textarea {
+    padding: 0px;
 }
 
 .form-control:focus {

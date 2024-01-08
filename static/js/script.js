@@ -83,14 +83,20 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   messageInput.addEventListener('input', function() {
-    if (!this.value) {
-      this.style.height = '24px';
-    } else {
-      const rowCount = (this.value.match(/\n/g) || []).length + 1;
-      const newHeight = 24 + (rowCount - 1) * 24;
-      this.style.height = newHeight + 'px';
-      currentRow = rowCount;
+    this.style.height = '24px'; 
+    const totalHeight = this.scrollHeight;
+  
+    const lineHeight = 24;
+    const newLines = (this.value.match(/\n/g) || []).length;
+    
+    let overflowedContentHeight = totalHeight - lineHeight; 
+
+    if(this.scrollHeight <= this.clientHeight){
+      overflowedContentHeight = 0;
     }
+  
+    let newHeight = lineHeight + Math.max(newLines, overflowedContentHeight / lineHeight) * lineHeight;
+    this.style.height = `${newHeight}px`;
   });
 
   function copyToClipboard(code) {
@@ -130,4 +136,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   observer.observe(chatBox, { childList: true });
+
+  window.addEventListener('load', (event) => {
+  messageInput.focus();
+  });
 });
