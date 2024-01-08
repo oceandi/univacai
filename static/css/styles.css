@@ -25,8 +25,8 @@ html, body {
 }
 
 .container {
-    padding: 56px 28px 28px 28px;
-    width: 752px;
+    padding: 56px 28px 32px 28px;
+    width: 766px;
     height: fit-content;
 }
 
@@ -99,7 +99,7 @@ html, body {
     align-items: center;
     justify-content: space-between;
     border: 1px solid rgba(217, 217, 227, .2);
-    border-radius: 15px;
+    border-radius: 16px;
     transition: border-color 0.1s, background-color 0.1s; /* Geçiş efektlerini ekliyoruz */
 }
 
@@ -138,7 +138,7 @@ html, body {
     flex-grow: 1;
     color: #ececf1;
     line-height: 1.5rem;
-    margin: 16px;
+    margin: 14px;
 }
 
 textarea {
@@ -332,6 +332,14 @@ pre {
 @media screen and (max-width: 767px) {
     .chat-box {
         block-size: calc(100vh - 200px); /* Sayfa yüksekliğine bağlı olarak ayarlayın (form kontrol alanını da hesaba katar) */
+    }
+
+    .form-control {
+        margin: 10px;
+    }
+
+    .container {
+        padding: 56px 28px 16px 28px;
     }
 
     /* Add any additional styles for this screen size */
