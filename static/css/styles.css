@@ -39,6 +39,7 @@ html, body {
     align-items: flex-start;
     margin-block-end: 10px;
     line-height: 1.75;
+    z-index: 3;
 }
 
 /* Özel bir kaydırma çubuğu için genel stil tanımı */
