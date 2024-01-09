@@ -43,7 +43,7 @@ def get_chat_response(message):
     chat_history.append({"role": "user", "content": message})
 
     data = {
-        "model": "gpt-4-1106-preview",
+        "model": "gpt-3.5-turbo-1106",
         "messages": chat_history
     }
     response = requests.post("https://api.openai.com/v1/chat/completions", json=data, headers=headers)
