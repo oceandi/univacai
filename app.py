@@ -20,6 +20,14 @@ app.permanent_session_lifetime = timedelta(days=365)
 app.config['SESSION_TYPE'] = 'filesystem'
 Session(app)
 
+@app.before_request
+def before_request():
+    server_name = 'www.univacai.com'
+    if request.host != server_name and 'univacai.com' in request.host:
+        url = request.url.replace(request.host, server_name, 1)
+        code = 301  # Kalıcı yönlendirme için HTTP durum kodu
+        return redirect(url, code=code)
+
 oauth = OAuth(app)
 oauth.register(
     "auth0",
