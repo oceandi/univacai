@@ -29,6 +29,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const msgDiv = document.createElement("div");
     msgDiv.classList.add("message", isUser ? "user-message" : "bot-message");
 
+    const headerDiv = document.createElement("div");
+    headerDiv.classList.add(isUser ? "user-header" : "ai-header");
+    if (isUser) {
+      // Kullanıcı adı ve fotoğrafını ekleyin
+      headerDiv.style.display = 'flex';
+      headerDiv.style.alignItems = 'center';
+      headerDiv.innerHTML = `<img src="${userProfile.picture}" alt="User profile" style="width:24px; height:24px; border-radius: 9999px;"><span style="font-weight:600; font-size:16px; margin-left: 10px; color: #fff";>You</span>`;
+    } else {
+      // UnivacAI adı ve logosunu ekleyin
+      const elipsDiv = document.createElement("div");
+      elipsDiv.classList.add("elips");
+      headerDiv.appendChild(elipsDiv);
+      headerDiv.innerHTML += `<span style="font-weight:600; font-size:16px; color: #fff;">UnivacAI</span>`;
+    }
+
     const codeBlockRegex = /```([a-z]+)\n([\s\S]*?)```/gm;
     let match;
     let lastIndex = 0;
@@ -43,10 +58,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     formattedMessage += escapeHtml(message.substring(lastIndex));
-
-    const displayMessage = isUser ? `<p>${formattedMessage}</p>` : formattedMessage;
-    msgDiv.innerHTML = displayMessage;
-
+    const messageContentDiv = document.createElement("div");
+    messageContentDiv.classList.add("message-content");
+    messageContentDiv.innerHTML = isUser ? `<p>${formattedMessage}</p>` : `<p>${formattedMessage}</p>`;
+  
+    msgDiv.appendChild(headerDiv);
+    msgDiv.appendChild(messageContentDiv);
+  
     chatBox.appendChild(msgDiv);
     chatBox.scrollTop = chatBox.scrollHeight;
   }
@@ -97,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
   messageInput.addEventListener('input', function() {
     this.style.height = '24px'; 
     const totalHeight = this.scrollHeight;
+    this.value = capitalizeFirstLetter(this.value);
   
     const lineHeight = 24;
     const newLines = (this.value.match(/\n/g) || []).length;
@@ -110,6 +129,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let newHeight = lineHeight + Math.max(newLines, overflowedContentHeight / lineHeight) * lineHeight;
     this.style.height = `${newHeight}px`;
   });
+
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
 
   function copyToClipboard(code) {
     if (navigator.clipboard) {

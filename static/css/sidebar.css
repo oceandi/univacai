@@ -65,7 +65,6 @@
 
 #content {
     transition: margin-left .3s ease;
-    padding: 16px;
 }
 
 #content .open-btn {

@@ -32,6 +32,7 @@ html, body {
 
 .chat-box {
     padding: 15px;
+    padding-left: 35px;
     block-size: calc(100vh - 150px); /* Sayfa yüksekliğine bağlı olarak ayarlayın (form kontrol alanını da hesaba katar) */
     overflow-y: auto;
     justify-content: flex-start;
@@ -65,14 +66,16 @@ html, body {
     border-radius: 6px; /* Köşelerin yuvarlaklığı */
 }
 
-.bot-message {
-    text-align: start;
-    padding-inline-start: 0px;
-    border-radius: 15px;
-    color:#ececf1;
-    padding: 10px;
-    border-radius: 15px;
-    white-space: pre-wrap;
+.message-content p {
+    margin-block-start: 0px !important;
+}
+
+.ai-header {
+    margin-left: -36px;
+}
+
+.user-header {
+    margin-left: -34px;
 }
 
 .user-message p {
@@ -80,11 +83,9 @@ html, body {
     padding-inline-start: 0px;
     border-radius: 15px;
     color:#ececf1;
-    padding: 10px;
     border-radius: 15px;
     white-space: pre-wrap;
-    margin-block-end: 30px;
-    margin-block-start: 30px;
+    margin-block-end: 50px;
 }
 
 .bot-message p {
@@ -92,9 +93,20 @@ html, body {
     padding-inline-start: 0px;
     border-radius: 15px;
     color:#ececf1;
-    padding: 10px;
     border-radius: 15px;
     white-space: pre-wrap;
+    margin-block-end: 50px;
+}
+
+.elips {
+    width: 24px;
+    height: 8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transform: rotate(40deg); /* Elipsi eğik hale getir */
+    display: inline-block; /* Elipsi inline öğesi yapar */
+    margin-right: 8px; /* UnivacAI yazısından biraz boşluk bırak */
+    opacity: 0.8;
 }
 
 .form-group {
