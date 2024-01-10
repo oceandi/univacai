@@ -10,9 +10,11 @@ body, html {
 }
 .left {
     width: 60%; /* Yüzdelik genişlik */
-    background-image: url("https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/ocean1.gif");
+    background-image: url("https://raw.githubusercontent.com/oceandi/links/main/univacai/images/macbook/Macbook1.jpg");
+    background-color: #000;
+    background-repeat: repeat-x;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     color: white;
     text-align: center;
     align-items: center;
@@ -37,7 +39,6 @@ body, html {
     width: 214px;
     min-width: 5px;
     padding: 10px 20px;
-    margin: 3px 5px;
     border: none;
     border-radius: 6px;
     background-color: #3c46ff;
@@ -48,7 +49,7 @@ body, html {
 .buttons {
     display: flex;
     justify-content: center; /* Butonları merkezde hizala */
-    gap: 0px; /* Butonlar arası boşluk */
+    gap: 5px; /* Butonlar arası boşluk */
 }
 .right button:hover {
     background-color: #0056b3;
@@ -119,5 +120,18 @@ img {
     }
     .right {
         width: 100%;
+    }
+
+    .buttons {
+        width: 100%;
+    }
+
+    .right button {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .get {
+        width: 90%;
     }
 }
