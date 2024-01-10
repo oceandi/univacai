@@ -10,7 +10,7 @@ body, html {
 }
 .left {
     width: 60%; /* Yüzdelik genişlik */
-    background-image: url("https://raw.githubusercontent.com/oceandi/links/main/univacai/images/macbook/Macbook1.jpg");
+    background-image: url("https://raw.githubusercontent.com/oceandi/links/main/univacai/images/macbook/Macbook1.png");
     background-color: #000;
     background-repeat: repeat-x;
     background-position: center;

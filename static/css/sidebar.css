@@ -123,3 +123,24 @@
     display: none;
     font-size: 14px;
 }
+
+.tabs {
+    height: 44px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+@media screen and (max-width: 1919px) {}
+
+@media screen and (max-width: 1199px) {
+    #content {
+        display: none;
+    }
+}
+
+/* iPad ve iPhone 768px (e.g., veya daha azı) */
+@media screen and (max-width: 767px) {}

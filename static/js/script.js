@@ -75,6 +75,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  document.addEventListener('click', function(e) {
+    const sidebar = document.getElementById("sidebar");
+    const content = document.getElementById("content");
+
+    if (sidebar.style.width !== "0px" && e.target !== content && !content.contains(e.target) && !sidebar.contains(e.target)) {
+      sidebar.style.width = "0";
+      content.style.marginLeft = "0";
+      document.querySelector(".open-btn").classList.add("closed");
+      hideTooltip();
+    }
+  });
+
   messageInput.addEventListener('keypress', function(e) {
     if (e.key === 'Enter' && !e.shiftKey) {
       sendBtn.click();

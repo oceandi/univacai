@@ -6,15 +6,6 @@ html, body {
     -webkit-font-smoothing: antialiased;
 }
 
-.x {
-    height: 44px;
-    background-color: #000000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
 .desktop {
     inline-size: 100%;
     block-size: 100%;
@@ -468,7 +459,7 @@ pre {
 /* Macbook 768px and 1199px */
 @media screen and (max-width: 1199px) {
     .container {
-        padding: 56px 28px 28px 0px;
+        padding: 56px 28px 28px 28px;
         width: 97%;
         height: fit-content;
     }
