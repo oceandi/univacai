@@ -78,7 +78,27 @@ html, body {
     margin-left: -34px;
 }
 
+.user-message {
+    text-align: start;
+    padding-inline-start: 0px;
+    border-radius: 15px;
+    color:#ececf1;
+    border-radius: 15px;
+    white-space: pre-wrap;
+    margin-block-end: 50px;
+}
+
 .user-message p {
+    text-align: start;
+    padding-inline-start: 0px;
+    border-radius: 15px;
+    color:#ececf1;
+    border-radius: 15px;
+    white-space: pre-wrap;
+    margin-block-end: 50px;
+}
+
+.bot-message {
     text-align: start;
     padding-inline-start: 0px;
     border-radius: 15px;
@@ -95,7 +115,6 @@ html, body {
     color:#ececf1;
     border-radius: 15px;
     white-space: pre-wrap;
-    margin-block-end: 50px;
 }
 
 .elips {
