@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const chatBox = document.querySelector(".chat-box");
   const messageInput = document.querySelector("#message-input");
   const sendBtn = document.querySelector("#send-btn");
+  const profileButton = document.querySelector(".profile");
+  const dropdownContent = document.getElementById("dropdown-content");
 
   function styleCodeBlock(code, language) {
     // Function to apply styling to code blocks
@@ -25,6 +27,29 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(htmlContent);
   }
 
+  profileButton.addEventListener("click", function(event) {
+    const isDropdownOpen = dropdownContent.style.display === 'block';
+    dropdownContent.style.display = isDropdownOpen ? 'none' : 'block';
+    profileButton.classList.toggle('active', !isDropdownOpen);
+    event.stopPropagation();
+  });
+
+  document.addEventListener("click", function(event) {
+    const isProfileButton = event.target === profileButton || profileButton.contains(event.target);
+    const isDropdownContent = dropdownContent.contains(event.target);
+    const isDropdownOpen = dropdownContent.style.display === 'block';
+
+    if (!isProfileButton && !isDropdownContent && isDropdownOpen) {
+        dropdownContent.style.display = 'none';
+        profileButton.classList.remove('active');
+    }
+
+    if (isDropdownContent) {
+      dropdownContent.style.display = 'none';
+      profileButton.classList.remove('active');
+    }
+  });
+
   function addMessage(message, isUser) {
     const msgDiv = document.createElement("div");
     msgDiv.classList.add("message", isUser ? "user-message" : "bot-message");
@@ -35,13 +60,13 @@ document.addEventListener('DOMContentLoaded', function() {
       // Kullanıcı adı ve fotoğrafını ekleyin
       headerDiv.style.display = 'flex';
       headerDiv.style.alignItems = 'center';
-      headerDiv.innerHTML = `<img src="${userProfile.picture}" alt="User profile" style="width:24px; height:24px; border-radius: 9999px;"><span style="font-weight:600; font-size:16px; margin-left: 10px; color: #fff";>You</span>`;
+      headerDiv.innerHTML = `<img src="${userProfile.picture}" alt="User profile" style="width:24px; height:24px; border-radius: 9999px;"><span style="font-weight:600; font-size:16px; margin-left: 10px; color: var(--text-color);">You</span>`;
     } else {
       // UnivacAI adı ve logosunu ekleyin
       const elipsDiv = document.createElement("div");
       elipsDiv.classList.add("elips");
       headerDiv.appendChild(elipsDiv);
-      headerDiv.innerHTML += `<span style="font-weight:600; font-size:16px; color: #fff;">UnivacAI</span>`;
+      headerDiv.innerHTML += `<span style="font-weight:600; font-size:16px; color: var(--text-color);">UnivacAI</span>`;
     }
 
     const codeBlockRegex = /```([a-z]+)\n([\s\S]*?)```/gm;
@@ -96,8 +121,9 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('click', function(e) {
     const sidebar = document.getElementById("sidebar");
     const content = document.getElementById("content");
+    const settingsModal = document.getElementById("settingsModal");
 
-    if (sidebar.style.width !== "0px" && e.target !== content && !content.contains(e.target) && !sidebar.contains(e.target)) {
+    if (sidebar.style.width !== "0px" && e.target !== content && !content.contains(e.target) && !sidebar.contains(e.target) && !settingsModal.contains(e.target)) {
       sidebar.style.width = "0";
       content.style.marginLeft = "0";
       document.querySelector(".open-btn").classList.add("closed");

@@ -26,11 +26,11 @@
     padding: 8px;
     margin: 10px;
     gap: 10px;
-    cursor: pointer;
+    cursor: default;
 }
 
-.profile:hover{
-    background-color: #202123;
+.profile.active, .profile:hover {
+    background-color: #202123; /* Active ve hover durumları için arka plan rengi */
 }
 
 .user-info {
@@ -46,13 +46,20 @@
 #sidebar a {
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #ffffff;
     display: block;
     transition: 0.3s;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 3px;
 }
 
 #sidebar a:hover {
-    color: #f1f1f1;
+    color: rgb(255, 255, 255);
+    background-color: #026affed;
+    border-radius: 5px;
 }
 
 #sidebar .close-btn {
@@ -131,6 +138,28 @@
     left: 0;
     right: 0;
 }
+
+
+div#dropdown-content {
+    background-color: #202123;
+    border-radius: 8px;
+    margin: -5px 10px 0px 10px;
+    z-index: 50;
+    display: none;
+    position: absolute;
+}
+
+.setting {
+    width: 210px;
+    height: auto;
+    line-height: 1.25;
+    padding: 10px;
+}
+
+a:-webkit-any-link {
+    cursor: default;
+}
+
 
 
 @media screen and (max-width: 1919px) {}
