@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const chatBox = document.querySelector(".chat-box");
   const messageInput = document.querySelector("#message-input");
-  const sendBtn = document.querySelector("#send-btn");
+  let sendBtn = document.getElementById('send-btn');
   const profileButton = document.querySelector(".profile");
   const dropdownContent = document.getElementById("dropdown-content");
 
@@ -21,10 +21,67 @@ document.addEventListener('DOMContentLoaded', function() {
     return content.replace(/[&"'<>]/g, char => htmlEscapeTable[char]);
   }
 
+  sendBtn.addEventListener("click", sendMessage);
+  messageInput.addEventListener('input', updateSendButton);
+  
   function sendMessage() {
-    const htmlContent = document.getElementById('html-content').value;
-    // Burada htmlContent değerini modelle iletebilirsiniz
-    console.log(htmlContent);
+    const message = messageInput.value.trim();
+    if (message) {
+      addMessage(message, true);
+      sendBtn.classList.remove("enabled");
+      sendBtn.classList.add("sent");
+      sendBtn.innerHTML = getSendButtonIcon("sent");
+  
+      fetch('/api', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: message }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        const answer = data.answer;
+        addMessage(answer, false);
+        sendBtn.classList.remove("sent");
+        sendBtn.innerHTML = getSendButtonIcon("default");
+      })
+      .catch((error) => {
+        console.error('Hata:', error);
+        addMessage("Mesaj gönderilemedi.", false);
+      });
+  
+      messageInput.value = "";
+      messageInput.style.height = '24px';
+    }
+  }
+  
+  function updateSendButton() {
+    const message = messageInput.value.trim();
+    if (message) {
+      sendBtn.classList.add("enabled");
+    } else {
+      sendBtn.classList.remove("enabled");
+    }
+  }
+
+  function getSendButtonIcon(state) {
+    if (state === "sent") {
+      // Gönderildikten sonra gösterilecek yeni ikon
+      return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+               class="h-2 w-2 text-gizmo-gray-950 dark:text-gray-200" height="16" width="16">
+                <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2z"
+                 stroke-width="0"></path>
+              </svg>`;
+    } else {
+      // Varsayılan ikon (buton opaklığı düşükken veya aktif edildiğinde gösterilecek)
+      return `<span class="send-icon" data-state="closed">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-white">
+                  <path d="M7 11L12 6L17 11M12 18V7" stroke="currentColor" stroke-width="2"
+                       stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>`;
+    }
   }
 
   profileButton.addEventListener("click", function(event) {
@@ -154,6 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     let newHeight = lineHeight + Math.max(newLines, overflowedContentHeight / lineHeight) * lineHeight;
     this.style.height = `${newHeight}px`;
+    updateSendButton()
   });
 
   function capitalizeFirstLetter(string) {

@@ -77,7 +77,13 @@
                         </span>
                     </button>
                     <textarea id="message-input" class="form-control" placeholder="Message UnivacAI…"></textarea>
-                    <button id="send-btn" class="btn"><svg class="send-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
+                    <button id="send-btn" class="btn" onclick="sendMessage()">
+                        <span class="send-icon" data-state="closed">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-white dark:text-black">
+                            <path d="M7 11L12 6L17 11M12 18V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                        </span>
+                    </button>
                 </div>
             </div>
         </div>

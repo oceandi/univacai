@@ -195,6 +195,7 @@ html, body {
     block-size: 24px;
     max-block-size: 192px;
     padding-inline-start: 2px; 
+    padding-right: 12px;
     overflow-y: auto;
     flex-grow: 1;
     display: flex;
@@ -252,17 +253,49 @@ textarea {
     margin-inline-start: 10px;
 }
 
-.send-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
+#send-btn {
+    right: 12px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+  
+#send-btn svg {
+    width: 8px;
+    height: 8px;
 }
 
-.send-icon {
-    block-size: 24px;
-    inline-size: 24px;
-    fill: #fff;
+.text-white {
+    width: 24px !important;
+    height: 24px !important;
+}
+
+#send-btn.enabled {
+    background-color: rgba(255, 255, 255, 1); /* %100 opak beyaz */
+}
+  
+#send-btn.sent {
+    background-color: transparent;
+    color: var(--text-color);
+}
+  
+#send-btn.sent::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid var(--text-color);
 }
 
 .btn-sm {
