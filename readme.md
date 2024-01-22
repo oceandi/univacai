@@ -22,4 +22,4 @@ to your questions is a really important skill
 for a developer,
 because so many people have had same questions as you,
 and 99.9% of the time, the answer is out there, 
-you just have to get good at finding it.
+you just have to get good at finding it. 
