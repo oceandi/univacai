@@ -9,6 +9,8 @@ from authlib.integrations.flask_client import OAuth
 from datetime import timedelta
 from flask_session import Session
 
+client = openai.OpenAI()
+
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
@@ -43,25 +45,20 @@ oauth.register(
 # OpenAI API'yi kullanarak sohbet tamamlama işlevi
 def get_chat_response(message):
     api_key = os.getenv("OPENAI_API_KEY")
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {api_key}"
-    }
+
+    client = openai.OpenAI(api_key=api_key)
+
     chat_history = session.get('chat_history', [])
     chat_history.append({"role": "user", "content": message})
 
-    data = {
-        "model": "gpt-3.5-turbo-1106",
-        "messages": chat_history
-    }
-    response = requests.post("https://api.openai.com/v1/chat/completions", json=data, headers=headers)
-    if response.status_code == 200:
-        answer = response.json()['choices'][0]['message']['content']
-        chat_history.append({"role": "assistant", "content": answer})
-        session['chat_history'] = chat_history
-        return answer
-    else:
-        return "Üzgünüm, bir yanıt alamadım."
+    response = client.chat.completions.create(
+        model="gpt-3.5-turbo-1106",
+        messages=chat_history,
+    )
+    answer = response.choices[0].message.content
+    chat_history.append({"role": "assistant", "content": answer})
+    session['chat_history'] = chat_history
+    return answer
 
 @app.route("/login")
 def login_page():
