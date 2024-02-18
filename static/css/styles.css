@@ -4,6 +4,7 @@
     --border-color-dark: #d9d9e333;
     --border-color-dark-active: #d9d9e340;
     --setting-border-color-dark: #ffffff2e;
+    --text-quaternary-dark: white;
 
 
     --background-color-light: #f3ecea;
@@ -11,6 +12,7 @@
     --border-color-light:#8e8ea0;
     --border-color-light-active: #7a7a8e;
     --setting-border-color-light: #0000002e;
+    --text-quaternary-light: black;
 }
 
 .dark-mode {
@@ -19,6 +21,7 @@
     --border-color: var(--border-color-dark);
     --border-color-active: var(--border-color-dark-active);
     --setting-border-color: var(--setting-border-color-dark);
+    --text-quaternary: var(--text-quaternary-dark);
 }
   
 .light-mode {
@@ -27,6 +30,7 @@
     --border-color: var(--border-color-light);
     --border-color-active: var(--border-color-light-active);
     --setting-border-color: var(--setting-border-color-light);
+    --text-quaternary: var(--text-quaternary-light);
 }
 
 

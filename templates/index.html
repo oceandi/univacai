@@ -57,7 +57,12 @@
                 </div>
             </div>
             <div id="content">
-                <button class="open-btn closed" onclick="toggleNav()" onmouseover="showTooltip(getTooltipText())" onmouseout="hideTooltip()"><span></span></button>
+                <button class="open-btn closed" onclick="toggleNav()" onmouseover="showTooltip(getTooltipText())" onmouseout="hideTooltip()">
+                    <div class="flex h-6 w-6 flex-col items-center">
+                        <div class="h-3 w-1 rounded-full" style="background: var(--text-quaternary); transform: translateY(0.15rem) rotate(15deg) translateZ(0px);"></div>
+                        <div class="h-3 w-1 rounded-full" style="background: var(--text-quaternary); transform: translateY(-0.15rem) rotate(-15deg) translateZ(0px);"></div>
+                    </div>
+                </button>
                 <div id="tooltip"></div>
             </div>
             <div class="container">
