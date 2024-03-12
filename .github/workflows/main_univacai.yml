@@ -20,7 +20,7 @@ jobs:
       - name: Set up Python version
         uses: actions/setup-python@v3  # Python kurulum eylemini güncellenmiş sürümle kullan
         with:
-          python-version: '3.11'
+          python-version: '3.11.5'
 
       - name: Check current directory and list files
         run: |
