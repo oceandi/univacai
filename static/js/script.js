@@ -1,17 +1,3 @@
-var socket = io.connect('http://' + document.domain + ':' + location.port);
-var currentMessage = '';
-
-socket.on('result', function (data) {
-    var chatBox = document.querySelector('.message-content');
-    // Decode the result
-    var decodedResult = JSON.parse(data.result);
-    // Add the GPT-3 response, if exists
-    if (decodedResult && decodedResult !== 'undefined') {
-        currentMessage += '' + decodedResult;
-    }
-    chatBox.textContent = currentMessage;
-});
-
 document.addEventListener('DOMContentLoaded', function() {
   const chatBox = document.querySelector(".chat-box");
   const messageInput = document.querySelector("#message-input");

@@ -8,17 +8,14 @@ from urllib.parse import quote_plus, urlencode
 from authlib.integrations.flask_client import OAuth
 from datetime import timedelta
 from flask_session import Session
-from flask_socketio import SocketIO
 
 client = openai.OpenAI()
-openai.api_key = os.getenv('OPENAI_API_KEY')
 
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 app.secret_key = os.getenv("APP_SECRET_KEY")
-socketio = SocketIO(app)
 
 app.config['SESSION_COOKIE_SECURE'] = True
 app.permanent_session_lifetime = timedelta(days=365)
@@ -62,25 +59,6 @@ def get_chat_response(message):
     chat_history.append({"role": "assistant", "content": answer})
     session['chat_history'] = chat_history
     return answer
-
-@socketio.on('user-input')
-def handle_user_input(msg):
-
-    chat_history = session.get('chat_history', [])
-    chat_history.append({"role": "user", "content": msg})
-
-    data = client.chat.completions.create(
-        model="gpt-3.5-turbo-0125",
-        messages=chat_history,
-        stream=True,
-    )
-    for i in data:
-        if i.choices[0].delta.content:
-            result = i.choices[0].delta.content
-            chat_history.append({"role": "assistant", "content": result})
-            session['chat_history'] = chat_history
-            result = json.dumps(result, ensure_ascii=False)
-            socketio.emit('result', {'result': result})
 
 @app.route("/login")
 def login_page():
@@ -138,4 +116,4 @@ def auth_response():
     return redirect(url_for('index'))
 
 if __name__ == "__main__":
-    socketio.run(host="0.0.0.0", port=os.getenv("PORT", 3000))
+    app.run(host="0.0.0.0", port=os.getenv("PORT", 3000))
