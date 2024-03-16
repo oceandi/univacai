@@ -160,8 +160,32 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
         `;
         break;
+      case 'upgrade-plan':
+        settingsContent.innerHTML = `
+            <div class="upgrade-plan-content">
+                <h2>Upgrade Your Plan</h2>
+                <p>Unlock the full potential of AI with our exclusive $1/month plan.</p>
+                <div class="features-list">
+                    <h3>What you get:</h3>
+                    <ul class="up">
+                        <li><strong>GPT-4 Turbo</strong></li>
+                        <li><strong>Anthropic Claude Opus</strong></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="action-buttons">
+                    <button onclick="openUpgradeModal()" class="upgrade-button">Upgrade Now for $1/Month</button>
+                </div>
+            </div>
+        `;
+      break;
       // Ve diğer ayarlar için de benzer şekilde içerik eklenebilir.
     }
+  }
+
+  function openUpgradeModal() {
+    // Simple redirection to a hypothetical upgrade page
+    window.location.href = '/upgrade-plan-page';
   }
 
   var modal = document.getElementById('settingsModal');
