@@ -73,10 +73,6 @@ ul {
     padding: 50px 0 0 0;
 }
 
-.up {
-    padding: 0px !important;
-}
-
 li {
     padding: 4px;
     border-radius: 4px;
@@ -567,17 +563,4 @@ select#Highlight {
     background: transparent;
     border: 0px;
     color: var(--text-color);
-}
-
-.upgrade-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-.upgrade-button:hover {
-    background-color: #0056b3;
 }
