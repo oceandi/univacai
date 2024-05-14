@@ -181,11 +181,11 @@ a:-webkit-any-link {
 
 @media screen and (max-width: 1919px) {}
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {}
+
+/* iPad ve iPhone 768px (e.g., veya daha azı) */
+@media screen and (max-width: 767px) {
     #content {
         display: none;
     }
 }
-
-/* iPad ve iPhone 768px (e.g., veya daha azı) */
-@media screen and (max-width: 767px) {}
