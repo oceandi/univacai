@@ -52,7 +52,7 @@ def get_chat_response(message):
     chat_history.append({"role": "user", "content": message})
 
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-4",
         messages=chat_history,
     )
     answer = response.choices[0].message.content
